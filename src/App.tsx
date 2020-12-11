@@ -4,13 +4,12 @@ import { Provider } from 'react-redux';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
 
-import App from './App';
-import store from './store';
+// import store from './store';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider>
     <ConfigProvider locale={zhCN}>
       <App />
     </ConfigProvider>
