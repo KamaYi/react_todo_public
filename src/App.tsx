@@ -1,23 +1,12 @@
+import logo from './logo.svg';
+import './App.css';
+import Login from './views/login/index'
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { ConfigProvider } from 'antd';
-import zhCN from 'antd/es/locale/zh_CN';
 
-// import store from './store';
+function App() {
+  return (
+    <Login />
+  );
+}
 
-import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(
-  <Provider>
-    <ConfigProvider locale={zhCN}>
-      <App />
-    </ConfigProvider>
-  </Provider>,
-  document.getElementById('root'),
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.register();
+export default App;
