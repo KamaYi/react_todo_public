@@ -1,20 +1,20 @@
-import React, { useState, useCallback } from 'react';
-import { GithubOutlined, ZhihuOutlined } from '@ant-design/icons';
-import { Tabs, Checkbox, Button, Form } from 'antd';
-import './index.less';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import React from 'react';
+import { Result, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
-interface FormProp {
-  account?: string;
-  mobile?: string;
-  password?: string;
-  code?: number;
-}
-
-function Login(props: LoginProps) {
+function Error403() {
   return (
-    'asdasdas'
+    <Result
+      status="403"
+      title="403"
+      subTitle="系统提示：你暂无有访问该页面的权限，请联系管理员添加权限后使用"
+      extra={
+        <Button type="primary">
+          {/* <Link to="/">返回首页</Link> */}
+        </Button>
+      }
+    />
   );
 }
 
-export default Login
+export default Error403;
