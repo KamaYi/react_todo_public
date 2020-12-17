@@ -1,0 +1,16 @@
+.page-login .ant-tabs-bar {
+  border: none;
+}
+.page-login .ant-tabs-nav-scroll {
+  text-align: center;
+}
+.page-login .ant-tabs-nav-container {
+  font-size: 14px;
+}
+.page-login__others {
+  color: #999;
+}
+.page-login__icon {
+  margin-left: 10px;
+  font-size: 18px;
+}

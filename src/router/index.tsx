@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { getUserInfo } from "@/store/actions";
+import { getUserInfo } from "@/store/actions/index";
 import Layout from "@/views/layout";
 import Login from "@/views/";
 class Router extends React.Component {
