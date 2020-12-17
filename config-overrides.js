@@ -15,6 +15,6 @@ module.exports = override(
     }),
     // 配置路径别名
     addWebpackAlias({
-        "@": path.resolve(__dirname, 'src')
+        "@": path.resolve(__dirname, 'src/*')
     }),
 );
