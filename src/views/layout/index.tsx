@@ -1,23 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
-import Content from "./Content";
-import Header from "./Header";
-import RightPanel from "./RightPanel";
-import Sider from "./Sider";
-import TagsView from "./TagsView";
-import { Layout } from "antd";
-const Main = (props) => {
-  const { tagsView } = props;
+import { Layout } from 'antd';
+
+const { Header, Footer, Sider, Content } = Layout
+
+const Main = () => {
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Sider />
+    <Layout>
+      <Header>Header</Header>
       <Layout>
-        <Header />
-        {tagsView ? <TagsView /> : null}
-        <Content />
-        <RightPanel />
+        asdasd
       </Layout>
     </Layout>
   );
 };
-export default connect((state) => state.settings)(Main);
+export default Main;

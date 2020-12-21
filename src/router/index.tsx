@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 // import { getUserInfo } from "@/store/actions";
 import Layout from "@/views/layout/index";
-import Login from "@/views/login";
+import Login from "@/views/component/login";
 
 function Router() {
   const token = false
@@ -11,7 +11,7 @@ function Router() {
   return (
     <HashRouter>
       <Switch>
-        <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/login" component={Login} /> */}
         <Route
           path="/"
           render={() => {
