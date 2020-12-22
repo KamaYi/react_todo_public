@@ -2,8 +2,7 @@ import React from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 // import { getUserInfo } from "@/store/actions";
-import Layout from "@/views/layout/index";
-import Login from "@/views/component/login";
+import Main from "@/views/layout/index";
 
 function Router() {
   const token = false
@@ -19,7 +18,7 @@ function Router() {
               return <Redirect to="/login" />;
             } else {
               if (role) {
-                return <Layout />;
+                return <Main />;
               } else {
                 // getUserInfo(token).then(() => <Layout />);
               }

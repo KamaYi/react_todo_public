@@ -9,7 +9,6 @@ const Main = () => {
     <Layout>
       <Header>Header</Header>
       <Layout>
-        asdasd
       </Layout>
     </Layout>
   );
