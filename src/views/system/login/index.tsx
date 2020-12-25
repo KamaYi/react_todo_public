@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Tabs, Checkbox, Button, Form } from 'antd';
 import { GithubOutlined, ZhihuOutlined } from '@ant-design/icons';
 import { Link, RouteComponentProps } from 'react-router-dom';
@@ -17,7 +17,33 @@ interface FormProp {
   code?: number;
 }
 
-function Login() {
+function Login(props: LoginProps) {
+  const [activeTab, setActiveTab] = useState('account');
+  const [form] = Form.useForm();
+
+  const next = () => {
+    const params = new URLSearchParams(window.location.search);
+    const redirectURL = params.get('redirectURL');
+    if (redirectURL) {
+      window.location.href = redirectURL;
+      return;
+    }
+    props.history.push('/');
+  };
+
+  const onSubmit = useCallback(() => {
+    form.validateFields().then(res => {
+      const values = res as FormProp;
+      if (values.account && values.password) {
+
+        return;
+      }
+
+      if (values.mobile && values.code) {
+        
+      }
+    });
+  }, []);
   return (
     <FormWrap className="page-login">
       <Tabs defaultActiveKey={activeTab} onChange={setActiveTab}>
