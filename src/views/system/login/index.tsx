@@ -1,6 +1,23 @@
 import React from 'react';
-import { Result,Button } from 'antd';
-function Error403() {
+import { Tabs, Checkbox, Button, Form } from 'antd';
+import { GithubOutlined, ZhihuOutlined } from '@ant-design/icons';
+import { Link, RouteComponentProps } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setUserInfo, UserState } from '../../../store/module/user';
+import FormWrap from '../component/FormWrap';
+import LoginItem from '../component/LoginItem';
+
+interface LoginProps extends RouteComponentProps {
+  setUserInfo: (userInfo: UserState) => void;
+}
+interface FormProp {
+  account?: string;
+  mobile?: string;
+  password?: string;
+  code?: number;
+}
+
+function Login() {
   return (
     <FormWrap className="page-login">
       <Tabs defaultActiveKey={activeTab} onChange={setActiveTab}>
@@ -49,4 +66,6 @@ function Error403() {
   );
 }
 
-export default Error403;
+export default connect(() => ({}), {
+  setUserInfo,
+})(Login);
