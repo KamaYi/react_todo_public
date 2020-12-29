@@ -1,0 +1,60 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.layout--side-bar {
+  flex-direction: row;
+}
+.layout__main {
+  position: relative;
+  flex: 1;
+  height: 110vh;
+  overflow-y: scroll;
+}
+.layout__container {
+  padding: 20px;
+}
+.layout__container--fix {
+  padding-top: 85px;
+}
+.layout__container--fixed {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.layout--weak {
+  filter: invert(80%);
+}
+.layout__route {
+  position: relative;
+}
+.layout__route-enter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(40px, 0, 0);
+  opacity: 0;
+}
+.layout__route-enter-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition: all 300ms;
+}
+.layout__route-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.layout__route-exit-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(-40px, 0, 0);
+  opacity: 0;
+  transition: all 300ms;
+}
