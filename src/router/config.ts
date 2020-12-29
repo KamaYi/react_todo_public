@@ -30,7 +30,7 @@ export interface IRoute extends IRouteBase {
 const routes: IRoute[] = [
   {
     path: '/',
-    component: React.lazy(() => import('../layout/layout')),
+    component: React.lazy(() => import('@/layout/Layout')),
     meta: {
       title: '系统路由',
     },
