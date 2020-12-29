@@ -4,6 +4,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import { Spin, Result, Button, Layout, Typography } from 'antd';
 import { getPageTitle, systemRouteList } from '@/router/utils';
 import { IRoute } from '@/router/config';
+import Login from "@/views/system/login/index";
 import './layout.less';
 
 interface UserLayoutState {
@@ -59,6 +60,7 @@ class UserLayout extends React.PureComponent<any, UserLayoutState> {
             </div>
             <Suspense fallback={<Spin className="layout__loading" />}>
               <Switch>
+                <Route exact path="/system/login" component={Login} />
                 {systemRouteList.map((menu: IRoute) => (
                   <Route exact key={menu.path} path={menu.path} component={menu.component}></Route>
                 ))}

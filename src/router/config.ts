@@ -34,10 +34,11 @@ const routes: IRoute[] = [
     meta: {
       title: '系统路由',
     },
+    redirect: '/system/login',
     children: [
       {
         path: '/system/login',
-        component: React.lazy(() => import('../views/system/login')),
+        component: React.lazy(() => import('@/views/system/login/index')),
         meta: {
           title: '登录',
         }
