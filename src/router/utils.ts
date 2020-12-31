@@ -29,6 +29,7 @@ export function flattenRoute(routeList: IRoute[], deep: boolean, auth: boolean):
 }
 
 function getLayoutRouteList(): IRoute[] {
+  console.log(' flattenRoute(routes, false, false): ',  flattenRoute(routes, false, false));
   return flattenRoute(routes, false, false);
 }
 

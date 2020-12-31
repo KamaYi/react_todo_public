@@ -26,7 +26,7 @@ export interface Config {
 
 const AdminConfig: Config = {
   // react-router basename
-  BASENAME: '/react-ant-admin',
+  BASENAME: '/',
 
   // 请求成功状态码
   SUCCESS_CODE: 200,
@@ -35,7 +35,7 @@ const AdminConfig: Config = {
   LOGIN_EXPIRE: 400,
 
   // 统一请求地址
-  API_URL: 'https://www.landluck.com.cn/react-ant-admin-api',
+  API_URL: '',
 
   // 本地存储token 的key
   TOKEN_KEY: 'Admin_Token_key',

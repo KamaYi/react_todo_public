@@ -59,7 +59,7 @@ axios.interceptors.response.use(
           store.dispatch(logout());
           window.location.href = `${
             window.location.origin
-          }/react-ant-admin/system/login?redirectURL=${encodeURIComponent(window.location.href)}`;
+          }/system/login?redirectURL=${encodeURIComponent(window.location.href)}`;
         },
         onCancel() {},
       });

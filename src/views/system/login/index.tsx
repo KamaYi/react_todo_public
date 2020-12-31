@@ -3,7 +3,7 @@ import { Tabs, Checkbox, Button, Form } from 'antd';
 import { GithubOutlined, ZhihuOutlined } from '@ant-design/icons';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setUserInfo, UserState } from '../../../store/module/user';
+import { setUserInfo, UserState } from '@/store/module/user';
 import FormWrap from '../component/FormWrap';
 import LoginItem from '../component/LoginItem';
 

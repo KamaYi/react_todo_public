@@ -7,12 +7,12 @@ import { IRoute } from '@/router/config';
 import Login from "@/views/system/login/index";
 import './layout.less';
 
-interface UserLayoutState {
+interface LayoutState {
   isError: boolean;
 }
 
-class UserLayout extends React.PureComponent<any, UserLayoutState> {
-  state: UserLayoutState = {
+class AdminLayout extends React.PureComponent<any, LayoutState> {
+  state: LayoutState = {
     isError: false,
   };
 
@@ -76,4 +76,4 @@ class UserLayout extends React.PureComponent<any, UserLayoutState> {
   }
 }
 
-export default UserLayout;
+export default AdminLayout;
