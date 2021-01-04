@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import { Route, Switch, Link } from 'react-router-dom';
-import { Spin, Result, Button, Layout, Typography } from 'antd';
+import { Spin, Result, Button, Layout } from 'antd';
 import { getPageTitle, systemRouteList } from '@/router/utils';
 import { IRoute } from '@/router/config';
 import './layout.less';
@@ -51,13 +51,6 @@ class AdminLayout extends React.PureComponent<any, LayoutState> {
 
         <div className="container">
           <div className="content">
-            <div className="top">
-              <Typography.Title className="header">
-                <Link to="/">
-                  <span className="title">登录 </span>
-                </Link>
-              </Typography.Title>
-            </div>
             <Suspense fallback={<Spin className="layout__loading" />}>
               <Switch>
                 {systemRouteList.map((menu: IRoute) => (

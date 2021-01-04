@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Tabs, Checkbox, Button, Form } from 'antd';
+import { Tabs, Checkbox, Button, Form,Typography } from 'antd';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setUserInfo, UserState } from '@/store/module/user';
@@ -39,12 +39,19 @@ function Login(props: LoginProps) {
       }
 
       if (values.mobile && values.code) {
-        
+
       }
     });
   }, []);
   return (
     <FormWrap className="page-login">
+      <div className="top">
+        <Typography.Title className="header">
+          <Link to="/">
+            <span className="title">登录 </span>
+          </Link>
+        </Typography.Title>
+      </div>
       <Tabs defaultActiveKey={activeTab} onChange={setActiveTab}>
         <Tabs.TabPane tab="账号密码登录" key="account"></Tabs.TabPane>
         <Tabs.TabPane tab="手机号登录" key="mobile"></Tabs.TabPane>
@@ -57,17 +64,17 @@ function Login(props: LoginProps) {
             <LoginItem.Password form={form} />
           </>
         ) : (
-          <>
-            <LoginItem.Mobile form={form} />
-            <LoginItem.Code form={form} />
-          </>
-        )}
+            <>
+              <LoginItem.Mobile form={form} />
+              <LoginItem.Code form={form} />
+            </>
+          )}
 
         <Form.Item>
           <div className="align--between">
-            <Checkbox defaultChecked>自动登录</Checkbox>
+            {/* <Checkbox defaultChecked>自动登录</Checkbox> */}
             {/* <Link to="/system/recovery-pwd">忘记密码</Link> */}
-            <Link to="/system/test">忘记密码</Link>
+            <Link to="/system/test">test</Link>
           </div>
         </Form.Item>
 
@@ -77,11 +84,11 @@ function Login(props: LoginProps) {
           </Button>
         </Form.Item>
 
-        <Form.Item>
+        {/* <Form.Item>
           <div className="align--between">
             <Link to="/system/register">注册账号</Link>
           </div>
-        </Form.Item>
+        </Form.Item> */}
       </Form>
     </FormWrap>
   );
