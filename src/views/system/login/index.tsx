@@ -21,15 +21,15 @@ function Login(props: LoginProps) {
   const [activeTab, setActiveTab] = useState('account');
   const [form] = Form.useForm();
 
-  const next = () => {
-    const params = new URLSearchParams(window.location.search);
-    const redirectURL = params.get('redirectURL');
-    if (redirectURL) {
-      window.location.href = redirectURL;
-      return;
-    }
-    props.history.push('/');
-  };
+  // const next = () => {
+  //   const params = new URLSearchParams(window.location.search);
+  //   const redirectURL = params.get('redirectURL');
+  //   if (redirectURL) {
+  //     window.location.href = redirectURL;
+  //     return;
+  //   }
+  //   props.history.push('/');
+  // };
 
   const onSubmit = useCallback(() => {
     form.validateFields().then(res => {
