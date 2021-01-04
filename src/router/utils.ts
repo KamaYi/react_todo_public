@@ -43,7 +43,9 @@ function getBusinessRouteList(): IRoute[] {
 }
 
 function getSystemRouteList(): IRoute[] {
+  console.log('routes: ', routes);
   const routeList = routes.filter(route => route.path === '/system');
+  console.log('routeList: ', routeList);
 
   if (routeList.length > 0) {
     return flattenRoute(routeList, true, false);

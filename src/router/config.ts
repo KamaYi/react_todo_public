@@ -29,7 +29,7 @@ export interface IRoute extends IRouteBase {
 
 const routes: IRoute[] = [
   {
-    path: '/',
+    path: '/system',
     component: React.lazy(() => import('@/layout/Layout')),
     meta: {
       title: '系统路由',
@@ -38,9 +38,15 @@ const routes: IRoute[] = [
     children: [
       {
         path: '/system/login',
-        component: React.lazy(() => import('@/views/system/login/index')),
+        component: React.lazy(() => import('@/views/system/login')),
         meta: {
           title: '登录',
+        }
+      },{
+        path: '/system/test',
+        component: React.lazy(() => import('@/views/system/test')),
+        meta: {
+          title: '测试',
         }
       }
     ]

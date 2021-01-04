@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import { Tabs, Checkbox, Button, Form } from 'antd';
-import { GithubOutlined, ZhihuOutlined } from '@ant-design/icons';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setUserInfo, UserState } from '@/store/module/user';
@@ -67,7 +66,8 @@ function Login(props: LoginProps) {
         <Form.Item>
           <div className="align--between">
             <Checkbox defaultChecked>自动登录</Checkbox>
-            <Link to="/system/recovery-pwd">忘记密码</Link>
+            {/* <Link to="/system/recovery-pwd">忘记密码</Link> */}
+            <Link to="/system/test">忘记密码</Link>
           </div>
         </Form.Item>
 
@@ -79,11 +79,6 @@ function Login(props: LoginProps) {
 
         <Form.Item>
           <div className="align--between">
-            <div className="page-login__others">
-              其他登录方式
-              <GithubOutlined className="page-login__icon"></GithubOutlined>
-              <ZhihuOutlined className="page-login__icon"></ZhihuOutlined>
-            </div>
             <Link to="/system/register">注册账号</Link>
           </div>
         </Form.Item>

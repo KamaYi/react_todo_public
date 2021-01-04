@@ -4,7 +4,6 @@ import { Route, Switch, Link } from 'react-router-dom';
 import { Spin, Result, Button, Layout, Typography } from 'antd';
 import { getPageTitle, systemRouteList } from '@/router/utils';
 import { IRoute } from '@/router/config';
-import Login from "@/views/system/login/index";
 import './layout.less';
 
 interface LayoutState {
@@ -40,7 +39,9 @@ class AdminLayout extends React.PureComponent<any, LayoutState> {
     }
 
     const title = getPageTitle(systemRouteList);
-
+    console.log('====================================');
+    console.log(systemRouteList);
+    console.log('====================================');
     return (
       <>
         <Helmet>
@@ -53,23 +54,18 @@ class AdminLayout extends React.PureComponent<any, LayoutState> {
             <div className="top">
               <Typography.Title className="header">
                 <Link to="/">
-                  {/* <span className="title">React Ant Admin </span> */}
+                  <span className="title">登录 </span>
                 </Link>
               </Typography.Title>
-              {/* <div className="desc">React Ant Admin 是 Admin 这条街最靓的仔</div> */}
             </div>
             <Suspense fallback={<Spin className="layout__loading" />}>
               <Switch>
-                <Route exact path="/system/login" component={Login} />
                 {systemRouteList.map((menu: IRoute) => (
                   <Route exact key={menu.path} path={menu.path} component={menu.component}></Route>
                 ))}
               </Switch>
             </Suspense>
           </div>
-          <Layout.Footer style={{ textAlign: 'center' }}>
-            {/* React Ant Admin 是 Admin 这条街最靓的仔 */}
-          </Layout.Footer>
         </div>
       </>
     );
