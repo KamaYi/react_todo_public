@@ -23,8 +23,7 @@ export interface IRoute extends IRouteBase {
 }
 
 /**
- * routes 第一级路由负责最外层的路由渲染，比如 userLayout 和 Layout 的区分
- * 所有系统内部存在的页面路由都要在此地申明引入，而菜单栏的控制是支持异步请求控制的
+ * routes 第一级路由负责最外层的路由渲染，区分业务和系统模块。在此按照模块进行设计拆分
  */
 
 const routes: IRoute[] = [
@@ -38,16 +37,51 @@ const routes: IRoute[] = [
     children: [
       {
         path: '/system/login',
-        component: React.lazy(() => import('@/views/system/login')),
+        component: React.lazy(() => import(/*webpackChunkName:'Login'*/'@/views/system/login')),
         meta: {
           title: '登录',
         }
-      },{
-        path: '/system/test',
-        component: React.lazy(() => import('@/views/system/test')),
+      }, {
+        path: '/error',
         meta: {
-          title: '测试',
-        }
+          title: '错误页面',
+        },
+        redirect: '/error/404',
+        children: [
+          {
+            path: '/error/404',
+            auth: false,
+            component: React.lazy(() => import('@/views/error/404')),
+            meta: {
+              title: '页面不存在',
+            },
+          },
+          {
+            path: '/error/403',
+            auth: false,
+            component: React.lazy(() => import('@/views/error/403')),
+            meta: {
+              title: '暂无权限',
+            },
+          }
+        ]
+      }
+    ]
+  }, {
+    path: '/business',
+    component: React.lazy(() => import('@/layout/Layout')),
+    meta: {
+      title: '业务路由',
+    },
+    redirect: '/business/welecome',
+    children: [
+      {
+        path: '/business/welecome',
+        auth: false,
+        component: React.lazy(() => import('@/views/business/welcome')),
+        meta: {
+          title: '暂无权限',
+        },
       }
     ]
   }

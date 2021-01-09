@@ -1,4 +1,4 @@
-import { request } from '../../../api/request';
+import { request } from '@/request';
 import { UserState } from '@/store/module/user';
 
 interface PlainObject { }

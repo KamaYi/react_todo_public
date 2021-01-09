@@ -5,35 +5,33 @@ import { Spin, Result, Button, Layout } from 'antd';
 import { getPageTitle, systemRouteList } from '@/router/utils';
 import { IRoute } from '@/router/config';
 import './layout.less';
+import { Console } from 'console';
 
 interface LayoutState {
-  isError: boolean;
+  hasError: boolean;
 }
 
 class AdminLayout extends React.PureComponent<any, LayoutState> {
   state: LayoutState = {
-    isError: false,
+    hasError: false,
   };
 
   static getDerivedStateFromError() {
-    return { isError: true };
+    return { hasError: true };
   }
 
-  componentDidCatch() {
+  componentDidCatch(error: any,info: any) {
+    console.log(error)
+    console.log(info)
     // 上报错误
   }
 
   render() {
-    if (this.state.isError) {
+    if (this.state.hasError) {
       return (
         <Result
           status="warning"
-          title="系统错误，请联系管理员"
-          extra={
-            <Button type="primary" key="console">
-              Go Contact
-            </Button>
-          }
+          title="系统错误"
         />
       );
     }

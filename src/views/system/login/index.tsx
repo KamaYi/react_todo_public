@@ -72,8 +72,6 @@ function Login(props: LoginProps) {
 
         <Form.Item>
           <div className="align--between">
-            {/* <Checkbox defaultChecked>自动登录</Checkbox> */}
-            {/* <Link to="/system/recovery-pwd">忘记密码</Link> */}
             <Link to="/system/test">test</Link>
           </div>
         </Form.Item>
@@ -83,12 +81,9 @@ function Login(props: LoginProps) {
             登录
           </Button>
         </Form.Item>
-
-        {/* <Form.Item>
           <div className="align--between">
             <Link to="/system/register">注册账号</Link>
           </div>
-        </Form.Item> */}
       </Form>
     </FormWrap>
   );
