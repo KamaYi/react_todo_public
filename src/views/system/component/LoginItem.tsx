@@ -16,6 +16,7 @@ export interface LoginItemType {
 interface LoginItemConfig {
   name: string;
   rules: any[];
+  allowClear?: boolean;
   inputProps: InputProps & { visibilityToggle?: boolean };
 }
 
@@ -33,6 +34,7 @@ const config: { [key in keyof LoginItemType]: LoginItemConfig } = {
       placeholder: '6-18位账号',
       type: 'text',
     },
+    allowClear: true,
     rules: [{ required: true, message: '请输入合法账号', min: 6, max: 18 }],
   },
   Mobile: {
@@ -52,6 +54,7 @@ const config: { [key in keyof LoginItemType]: LoginItemConfig } = {
       type: 'password',
       visibilityToggle: true,
     },
+    allowClear: true,
     rules: [{ required: true, message: '请输入合法密码', min: 5 }],
   },
   Confirm: {

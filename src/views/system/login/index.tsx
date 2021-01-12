@@ -32,14 +32,10 @@ function Login(props: LoginProps) {
 
   const onSubmit = useCallback(() => {
     form.validateFields().then(res => {
+      console.log('res: ', res);
       const values = res as FormProp;
       if (values.account && values.password) {
-
-        return;
-      }
-
-      if (values.mobile && values.code) {
-
+        
       }
     });
   }, []);
@@ -52,38 +48,14 @@ function Login(props: LoginProps) {
           </Link>
         </Typography.Title>
       </div>
-      <Tabs defaultActiveKey={activeTab} onChange={setActiveTab}>
-        <Tabs.TabPane tab="账号密码登录" key="account"></Tabs.TabPane>
-        <Tabs.TabPane tab="手机号登录" key="mobile"></Tabs.TabPane>
-      </Tabs>
-
       <Form onFinish={onSubmit} form={form}>
-        {activeTab === 'account' ? (
-          <>
-            <LoginItem.Account form={form} />
-            <LoginItem.Password form={form} />
-          </>
-        ) : (
-            <>
-              <LoginItem.Mobile form={form} />
-              <LoginItem.Code form={form} />
-            </>
-          )}
-
-        <Form.Item>
-          <div className="align--between">
-            <Link to="/system/test">test</Link>
-          </div>
-        </Form.Item>
-
+        <LoginItem.Account form={form}/>
+        <LoginItem.Password form={form} />
         <Form.Item>
           <Button block htmlType="submit" type="primary">
             登录
           </Button>
         </Form.Item>
-          <div className="align--between">
-            <Link to="/system/register">注册账号</Link>
-          </div>
       </Form>
     </FormWrap>
   );
