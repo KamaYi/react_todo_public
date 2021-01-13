@@ -22,7 +22,7 @@ axios.defaults.headers = {
 
 // 指定请求地址
 
-axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? AdminConfig.API_URL : '';
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? AdminConfig.API_URL : 'http://127.0.0.1:4000';
 
 // 添加请求拦截器
 axios.interceptors.request.use(

@@ -19,7 +19,7 @@ interface FormProp {
 function Login(props: LoginProps) {
   const layout = {
     labelCol: { span: 6 },
-    wrapperCol: { span: 18 },
+    wrapperCol: { span: 14 },
   };
   const [form] = Form.useForm();
 
@@ -67,7 +67,7 @@ function Login(props: LoginProps) {
       >
         <Form.Item
           label="用户名："
-          name="Username"
+          name="account"
           rules={[{ required: true, message: '请输入用户名!' }]}
         >
           <Input />
@@ -81,7 +81,7 @@ function Login(props: LoginProps) {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item wrapperCol={{ span: 24 }}>
+        <Form.Item wrapperCol={{ offset: 3, span: 17 }}>
           <Button block htmlType="submit" type="primary">
             登录
           </Button>
