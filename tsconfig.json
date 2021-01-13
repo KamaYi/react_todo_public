@@ -25,7 +25,9 @@
   "include": [
     "src",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "express_mock/app.js",
+    "mock"
   ],
   "exclude": [
     "base"

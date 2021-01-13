@@ -10,7 +10,7 @@ function FormWrap({ children, className }: FormWrapProps) {
     <div
       className={className}
       style={{
-        width: '300px',
+        width: '500px',
         margin: '80px auto 0',
       }}
     >

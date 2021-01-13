@@ -1,12 +1,10 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet';
-import { Route, Switch, Link } from 'react-router-dom';
-import { Spin, Result, Button, Layout } from 'antd';
+import { Route, Switch } from 'react-router-dom';
+import { Spin, Result } from 'antd';
 import { getPageTitle, systemRouteList } from '@/router/utils';
 import { IRoute } from '@/router/config';
 import './layout.less';
-import { Console } from 'console';
-
 interface LayoutState {
   hasError: boolean;
 }

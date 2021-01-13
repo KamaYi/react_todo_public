@@ -1,10 +1,10 @@
-import React, { useState, useCallback } from 'react';
-import { Tabs, Checkbox, Button, Form,Typography } from 'antd';
+import React, { useCallback } from 'react';
+import { Input, Button, Form, Typography } from 'antd';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setUserInfo, UserState } from '@/store/module/user';
 import FormWrap from '../component/FormWrap';
-import LoginItem from '../component/LoginItem';
+import { apiUserLogin } from '@/api/system/index'
 
 interface LoginProps extends RouteComponentProps {
   setUserInfo: (userInfo: UserState) => void;
@@ -17,25 +17,36 @@ interface FormProp {
 }
 
 function Login(props: LoginProps) {
-  const [activeTab, setActiveTab] = useState('account');
+  const layout = {
+    labelCol: { span: 6 },
+    wrapperCol: { span: 18 },
+  };
   const [form] = Form.useForm();
 
-  // const next = () => {
-  //   const params = new URLSearchParams(window.location.search);
-  //   const redirectURL = params.get('redirectURL');
-  //   if (redirectURL) {
-  //     window.location.href = redirectURL;
-  //     return;
-  //   }
-  //   props.history.push('/');
-  // };
+  const next = () => {
+    const params = new URLSearchParams(window.location.search);
+    const redirectURL = params.get('redirectURL');
+    if (redirectURL) {
+      window.location.href = redirectURL;
+      return;
+    }
+    props.history.push('/');
+  };
 
   const onSubmit = useCallback(() => {
     form.validateFields().then(res => {
       console.log('res: ', res);
       const values = res as FormProp;
       if (values.account && values.password) {
-        
+        apiUserLogin({
+          account: values.account,
+          password: values.password,
+        })
+          .then(({ data }: { data: UserState }) => {
+            props.setUserInfo(data);
+            next();
+          })
+          .catch(() => { });
       }
     });
   }, []);
@@ -44,14 +55,33 @@ function Login(props: LoginProps) {
       <div className="top">
         <Typography.Title className="header">
           <Link to="/">
-            <span className="title">登录 </span>
+            <span className="title">账号登录</span>
           </Link>
         </Typography.Title>
       </div>
-      <Form onFinish={onSubmit} form={form}>
-        <LoginItem.Account form={form}/>
-        <LoginItem.Password form={form} />
-        <Form.Item>
+      <Form
+        {...layout}
+        initialValues={{ remember: true }}
+        onFinish={onSubmit}
+        form={form}
+      >
+        <Form.Item
+          label="用户名："
+          name="Username"
+          rules={[{ required: true, message: '请输入用户名!' }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="密码："
+          name="password"
+          rules={[{ required: true, message: '请输入密码!' }]}
+        >
+          <Input.Password />
+        </Form.Item>
+
+        <Form.Item wrapperCol={{ span: 24 }}>
           <Button block htmlType="submit" type="primary">
             登录
           </Button>
