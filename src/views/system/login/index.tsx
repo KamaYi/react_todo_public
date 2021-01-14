@@ -35,9 +35,9 @@ function Login(props: LoginProps) {
 
   const onSubmit = useCallback(() => {
     form.validateFields().then(res => {
-      console.log('res: ', res);
       const values = res as FormProp;
       if (values.account && values.password) {
+        console.log('res: ', res);
         apiUserLogin({
           account: values.account,
           password: values.password,

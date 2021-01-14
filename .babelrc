@@ -6,9 +6,8 @@
         [
             "module-resolver",
             {
-                "baseUrl": '.',
                 "alias": {
-                    "@/*": ["./src/*"],
+                    "@/*": ["./src/*"]
                 }
             }
         ]
