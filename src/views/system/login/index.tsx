@@ -30,7 +30,7 @@ function Login(props: LoginProps) {
       window.location.href = redirectURL;
       return;
     }
-    props.history.push('/');
+    props.history.push('/system/welcome');
   };
 
   const onSubmit = useCallback(() => {

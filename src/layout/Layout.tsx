@@ -9,7 +9,7 @@ interface LayoutState {
   hasError: boolean;
 }
 
-class AdminLayout extends React.PureComponent<any, LayoutState> {
+class Layout extends React.PureComponent<any, LayoutState> {
   state: LayoutState = {
     hasError: false,
   };
@@ -35,9 +35,6 @@ class AdminLayout extends React.PureComponent<any, LayoutState> {
     }
 
     const title = getPageTitle(systemRouteList);
-    console.log('====================================');
-    console.log(systemRouteList);
-    console.log('====================================');
     return (
       <>
         <Helmet>
@@ -61,4 +58,4 @@ class AdminLayout extends React.PureComponent<any, LayoutState> {
   }
 }
 
-export default AdminLayout;
+export default Layout;

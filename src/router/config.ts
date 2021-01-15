@@ -42,6 +42,12 @@ const routes: IRoute[] = [
           title: '登录',
         }
       }, {
+        path: '/system/welcome',
+        component: React.lazy(() => import(/*webpackChunkName:'Welcome'*/'@/views/system/welcome')),
+        meta: {
+          title: '登录',
+        }
+      }, {
         path: '/error',
         meta: {
           title: '错误页面',
