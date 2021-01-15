@@ -7,7 +7,6 @@ export interface UserLoginData {
 }
 
 export function apiUserLogin(data: UserLoginData) {
-    console.log('data: ', data);
     return request<UserState>({
         method: 'POST',
         url: '/user/login',

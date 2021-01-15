@@ -19,13 +19,13 @@ router.post('/user/login', function (req, res, next) {
     let token = jwt.sign(content, secretOrPrivateKey, {
       expiresIn: 60 * 60 * 1  // 1小时过期
     });
-    if (password != '123456') {
-      res.send(422, { status: 422, msg: '密码错误' })
+    if (password != '111111') {
+      res.send(422, { status: 422, msg: '密码错误',data: '' })
       return false;
     }
-    res.json({ status: 200, msg: '欢迎登录', token: token, account: req.body.account })
+    res.json({ status: 200, msg: '欢迎登录',data: { token: token, account: req.body.account } })
   } else {
-    res.send(422, { status: 422, msg: '请完善信息系' });
+    res.send(422, { status: 422, msg: '请完善信息系' , data: '' });
   }
 });
 

@@ -46,11 +46,9 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   (res: AxiosResponse<ResponseData<any>>) => {
     console.log('res: ', res);
-    if (!res.data) {
-      return Promise.resolve(res);
-    }
     // 请求成功 此处进行数据的批量处理
     if (res.status === 200) {
+      // @ts-ignore
       res.data.msg && message.info(res.data.msg)
       return res.data as any;
     }

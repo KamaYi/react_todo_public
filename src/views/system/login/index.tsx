@@ -43,6 +43,7 @@ function Login(props: LoginProps) {
           password: values.password,
         })
           .then(({ data }: { data: UserState }) => {
+            console.log('data: ', data);
             props.setUserInfo(data);
             next();
           })

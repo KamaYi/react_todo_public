@@ -12,7 +12,7 @@ export interface UserState {
     id: number;
 }
 
-const USER_KEY = 'React-ant-Admin-user';
+const USER_KEY = 'user-info';
 
 const localUser = LocalStore.getValue<UserState>(USER_KEY) || {};
 
@@ -44,8 +44,11 @@ const userReducer: Reducer<UserState, IAction<any>> = (
     state = defaultUser,
     action: IAction<any>,
 ) => {
+    console.log('action: ', action);
     const { type, payload } = action;
-
+    console.log('type: ', type);
+    
+    console.log('payload: ', payload);
     switch (type) {
         case SET_USER_INFO:
             setToken(payload.token);
