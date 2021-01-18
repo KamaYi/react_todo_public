@@ -3,8 +3,8 @@ import { Input, Button, Form, Typography } from 'antd';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setUserInfo, UserState } from '@/store/module/user';
-import FormWrap from '../component/FormWrap';
 import { apiUserLogin } from '@/api/system/index'
+import './index.less'
 
 interface LoginProps extends RouteComponentProps {
   setUserInfo: (userInfo: UserState) => void;
@@ -30,7 +30,7 @@ function Login(props: LoginProps) {
       window.location.href = redirectURL;
       return;
     }
-    props.history.push('/system/welcome');
+    props.history.push('/welcome');
   };
 
   const onSubmit = useCallback(() => {
@@ -52,7 +52,8 @@ function Login(props: LoginProps) {
     });
   }, []);
   return (
-    <FormWrap className="page-login">
+    <div className="login-container">
+      <div className="page-login">
       <div className="top">
         <Typography.Title className="header">
           <Link to="/">
@@ -88,7 +89,8 @@ function Login(props: LoginProps) {
           </Button>
         </Form.Item>
       </Form>
-    </FormWrap>
+    </div>
+    </div>
   );
 }
 

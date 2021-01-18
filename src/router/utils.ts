@@ -24,25 +24,10 @@ export function flattenRoute(routeList: IRoute[], deep: boolean, auth: boolean):
       result.push(...flattenRoute(route.children, deep, auth));
     }
   }
-
   return result;
 }
 
-function getLayoutRouteList(): IRoute[] {
-  console.log(' flattenRoute(routes, false, false): ',  flattenRoute(routes, false, false));
-  return flattenRoute(routes, false, false);
-}
-
-function getBusinessRouteList(): IRoute[] {
-  const routeList = routes.filter(route => route.path === '/');
-
-  if (routeList.length > 0) {
-    return flattenRoute(routeList, true, true);
-  }
-  return [];
-}
-
-function getSystemRouteList(): IRoute[] {
+function getRouteList(): IRoute[] {
   console.log('routes: ', routes);
   const routeList = routes.filter(route => route.path === '/system');
   console.log('routeList: ', routeList);
@@ -60,11 +45,8 @@ function getSystemRouteList(): IRoute[] {
  * 第三个: 业务路由，为 / 路由下的业务路由
  */
 
-export const layoutRouteList = getLayoutRouteList();
-
-export const businessRouteList = getBusinessRouteList();
-
-export const systemRouteList = getSystemRouteList();
+export const routeList = getRouteList();
+console.log('routeList: ', routeList);
 
 function findRoutesByPaths(pathList: string[], routeList: IRoute[], basename?: string): IRoute[] {
   return routeList.filter(
@@ -89,5 +71,5 @@ export function getPagePathList(pathname?: string): string[] {
  * 只有业务路由会有面包屑
  */
 export function getBreadcrumbs(): IRoute[] {
-  return findRoutesByPaths(getPagePathList(), businessRouteList, config.BASENAME);
+  return findRoutesByPaths(getPagePathList(), routeList, config.BASENAME);
 }

@@ -1,0 +1,35 @@
+.header-container {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.header-container .logo {
+  float: left;
+  width: 120px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  overflow: hidden;
+}
+.header-container .logo .sidebar-logo {
+  width: 60px;
+  animation: sidebar-logo-spin infinite 10s linear;
+}
+.header-container .logo span {
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 14px;
+  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+}
+@keyframes sidebar-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

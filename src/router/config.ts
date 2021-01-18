@@ -23,29 +23,29 @@ export interface IRoute extends IRouteBase {
 }
 
 /**
- * routes 第一级路由负责最外层的路由渲染，区分业务和系统模块。在此按照模块进行设计拆分
+ * routes 区分业务和系统模块。在此按照模块进行设计拆分，分别引入
  */
 
 const routes: IRoute[] = [
   {
-    path: '/system',
-    component: React.lazy(() => import('@/layout/Layout')),
+    path: '/',
+    component: React.lazy(() => import('@/views/layout')),
     meta: {
       title: '系统路由',
     },
-    redirect: '/system/login',
+    redirect: '/welcome',
     children: [
       {
-        path: '/system/login',
-        component: React.lazy(() => import(/*webpackChunkName:'Login'*/'@/views/system/login')),
+        path: '/login',
+        component: React.lazy(() => import(/*webpackChunkName:'Login'*/'@/views/login')),
         meta: {
           title: '登录',
         }
       }, {
-        path: '/system/welcome',
-        component: React.lazy(() => import(/*webpackChunkName:'Welcome'*/'@/views/system/welcome')),
+        path: '/welcome',
+        component: React.lazy(() => import(/*webpackChunkName:'Welcome'*/'@/views/welcome')),
         meta: {
-          title: '登录',
+          title: '欢迎页',
         }
       }, {
         path: '/error',
@@ -71,23 +71,6 @@ const routes: IRoute[] = [
             },
           }
         ]
-      }
-    ]
-  }, {
-    path: '/business',
-    component: React.lazy(() => import('@/layout/Layout')),
-    meta: {
-      title: '业务路由',
-    },
-    redirect: '/business/welecome',
-    children: [
-      {
-        path: '/business/welecome',
-        auth: false,
-        component: React.lazy(() => import('@/views/business/welcome')),
-        meta: {
-          title: '暂无权限',
-        },
       }
     ]
   }
