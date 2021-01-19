@@ -1,3 +1,7 @@
+.ant-layout-has-sider {
+  position: absolute;
+  top: 64px;
+}
 html,
 body,
 #root {

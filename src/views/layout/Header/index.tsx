@@ -7,7 +7,7 @@ const LayoutHeader = () => {
         <Header className="header-container">
             <div className="logo" >
                 <img src={logo} className="sidebar-logo" alt="logo" />
-                <span className="color-primary">暗黑主题</span>
+                <span className="color-primary">DataMap数据平台</span>
             </div>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                 <Menu.Item key="1">nav 1</Menu.Item>

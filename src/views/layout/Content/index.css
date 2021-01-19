@@ -1,23 +1,8 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-}
-.content {
-  flex: 1;
-}
-.title {
-  color: #333;
-  font-size: 24px;
-}
-.desc {
-  color: #666;
-}
-.top {
-  text-align: center;
-}
-.logo {
-  height: 44px;
-  margin-right: 16px;
-  vertical-align: top;
+.layout-content {
+  height: calc(100% - 64px);
+  width: calc(100%);
+  position: relative;
+  top: 64px;
+  background: #ccc;
+  padding: 24px;
 }

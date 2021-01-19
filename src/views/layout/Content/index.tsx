@@ -12,8 +12,7 @@ const LayoutContent = () => {
     const { Content } = Layout;
     return (
         <Content
-            className="site-layout-background"
-            style={{ padding: 24, minHeight: 380 }}
+            className="layout-content"
         >   <Helmet>
                 <title>{title}</title>
                 <meta name="description" content={title} />
