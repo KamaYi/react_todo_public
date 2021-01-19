@@ -4,21 +4,156 @@ import { Helmet } from 'react-helmet';
 import { Route, Switch } from 'react-router-dom';
 import { getPageTitle, routeList } from '@/router/utils';
 import { IRoute } from '@/router/config';
+import { Scrollbars } from 'react-custom-scrollbars';
 import './index.less'
 
 const LayoutContent = () => {
     const title = getPageTitle(routeList);
     console.log('routeList: ', routeList);
-    const { Content } = Layout;
     return (
-        <Content
-            className="layout-content"
-        >   <Helmet>
-                <title>{title}</title>
-                <meta name="description" content={title} />
-            </Helmet>
-            <div className="container">
-                <div className="content">
+        <div className="layout-content">
+            <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>
+                <Helmet>
+                    <title>{title}</title>
+                    <meta name="description" content={title} />
+                </Helmet>
+                <div className="container">
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
+                    <span>asdasdasd</span>
                     asdasdasd
                     <Suspense fallback={<Spin className="layout__loading" />}>
                         <Switch>
@@ -28,8 +163,8 @@ const LayoutContent = () => {
                         </Switch>
                     </Suspense>
                 </div>
-            </div>
-        </Content>
+            </Scrollbars>
+        </div>
     );
 };
 export default LayoutContent;
