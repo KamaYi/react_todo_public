@@ -1,5 +1,6 @@
 import React from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 import Layout from "@/views/layout";
 import Login from "@/views/login";
 class Router extends React.Component {
@@ -25,4 +26,4 @@ class Router extends React.Component {
     }
 }
 
-export default Router;
+export default connect((state) => state)(Router);

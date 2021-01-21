@@ -4,3 +4,6 @@
   position: relative;
   top: 64px;
 }
+.sidebar-menu-container .ant-layout-sider {
+  height: 100%;
+}
