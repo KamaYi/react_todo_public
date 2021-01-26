@@ -1,12 +1,12 @@
 import logo from "@/assets/images/logo.svg";
 import { ExportOutlined, FormOutlined } from '@ant-design/icons';
-import { Tooltip } from 'antd';
+import { Tooltip,message } from 'antd';
 import { connect } from 'react-redux';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps,withRouter } from 'react-router-dom';
 import { logout } from '@/store/module/user';
 import { StoreState } from '@/store/types';
 import './index.less'
-interface LayoutHeaderProps extends RouteComponentProps{ // 这样写存在ts类型问题 暂未解决
+interface LayoutHeaderProps extends RouteComponentProps{
     logout: () => void;
     realNameLast: string;
 }
@@ -17,9 +17,11 @@ function LayoutHeader(props: LayoutHeaderProps) {
         console.log('type: ', type);
         if (type === 'singOut') {
             logout()
+            message.info('退出成功')
             props.history.push('/login');
+            
         } else {
-            console.log('问卷调差');
+            message.info('问卷调查')
         }
     }
     return (
@@ -42,11 +44,10 @@ function LayoutHeader(props: LayoutHeaderProps) {
         </div>
     );
 };
-export default connect((state: StoreState) => {
-    console.log('state: ', state);
+export default withRouter(connect((state: StoreState) => {
     return {
         realNameLast: state.user.realName.substring(state.user.realName.length - 1, state.user.realName.length)
     }
 }, {
     logout,
-})(LayoutHeader);
+})(LayoutHeader));

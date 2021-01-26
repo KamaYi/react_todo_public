@@ -34,7 +34,7 @@ class LayoutView extends React.PureComponent<any, LayoutState> {
     }
     return (
       <Layout style={{height: '100vh'}}>
-        {/* <Header /> */}
+        <Header />
         <Layout>
           <Sider />
           <Content />

@@ -1,4 +1,4 @@
-import { request } from '@/axiosInterception';
+import { request } from '@/interception';
 import { UserState } from '@/store/module/user';
 
 export interface UserLoginData {

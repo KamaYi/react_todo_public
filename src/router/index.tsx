@@ -3,9 +3,11 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import Layout from "@/views/layout";
 import Login from "@/views/login";
+import { StoreState } from '@/store/types';
 class Router extends React.Component {
+    
     render() {
-        const token = '34234'
+        const token = '222'
         return (
             <HashRouter>
                 <Switch>
@@ -26,4 +28,8 @@ class Router extends React.Component {
     }
 }
 
-export default connect((state) => state)(Router);
+export default connect((state: StoreState) => {
+    return {
+        token: state.user.token
+    }
+})(Router);
