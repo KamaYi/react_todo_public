@@ -1,6 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Layout, Result } from 'antd';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Content from "./Content";
 import Header from "./Header";
 import Sider from "./Sider";
@@ -33,18 +33,12 @@ class LayoutView extends React.PureComponent<any, LayoutState> {
       );
     }
     return (
-      <Layout style={{ height: '100vh' }}>
-        <BrowserRouter>
-          <Switch>
-            <Route>
-              <Header />
-            </Route>
-            <Layout>
-              <Sider />
-              <Content />
-            </Layout>
-          </Switch>
-        </BrowserRouter>
+      <Layout style={{height: '100vh'}}>
+        {/* <Header /> */}
+        <Layout>
+          <Sider />
+          <Content />
+        </Layout>
       </Layout>
     );
   }
