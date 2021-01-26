@@ -5,24 +5,20 @@ import LocalStore from '../../utils/store';
 
 export interface UserState {
     token: string;
-    avatar: string | undefined;
-    account: string;
+    realName: string;
     mobile: string;
-    role: number;
-    id: number;
+    loginType: string;
 }
 
-const USER_KEY = 'user-info';
+const USER_KEY = 'userInfo';
 
 const localUser = LocalStore.getValue<UserState>(USER_KEY) || {};
 
 const defaultUser: UserState = {
     token: getToken(),
-    avatar: undefined,
-    account: '',
     mobile: '',
-    role: 0,
-    id: 0,
+    realName: '',
+    loginType: '',
     ...localUser,
 };
 

@@ -94,6 +94,6 @@ function Login(props: LoginProps) {
   );
 }
 
-export default connect(() => ({}), {
+export default connect(() => {}, {
   setUserInfo,
 })(Login);

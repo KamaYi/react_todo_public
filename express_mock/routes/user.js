@@ -23,7 +23,7 @@ router.post('/user/login', function (req, res, next) {
       res.send(422, { status: 422, msg: '密码错误',data: '' })
       return false;
     }
-    res.json({ status: 200, msg: '欢迎登录',data: { token: token, account: req.body.account } })
+    res.json({ status: 200, msg: '欢迎登录',data: { token: token, realName: req.body.account } })
   } else {
     res.send(422, { status: 422, msg: '请完善信息系' , data: '' });
   }

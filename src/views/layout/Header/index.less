@@ -3,8 +3,9 @@
 	z-index: 1;
 	width: 100%;
 	padding: unset;
+	background: @white;
+	display: flex;
 	.logo {
-		float: left;
 		width: 200px;
 		height: 64px;
 		line-height: 64px;
@@ -17,12 +18,38 @@
 		span {
 			display: inline-block;
 			margin: 0;
-			color: @white;
 			font-weight: 600;
 			line-height: 50px;
-			font-size: 14px;
 			font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
 			vertical-align: middle;
+		}
+	}
+	.right-option {
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
+		padding: @interval16 @interval24 @interval16;
+		height: 64px;
+		.right-option_name{
+			margin-right: @interval16;
+			font-size: 14px;
+			line-height: 35px;
+			width: 35px;
+			height: 35px;
+			cursor: pointer;
+			user-select: none;
+			text-align: center;
+			vertical-align: middle;
+			color: #fff;
+			border-radius: 50%;
+			background: #69c8b9;
+		}
+		.anticon {
+			cursor: pointer;
+			font-size: @fontSize20;
+		}
+		.anticon-form {
+			margin-right: @interval16;
 		}
 	}
 }
