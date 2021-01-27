@@ -4,10 +4,13 @@ import { connect } from "react-redux";
 import Layout from "@/views/layout";
 import Login from "@/views/login";
 import { StoreState } from '@/store/types';
+
+interface RouteProps {
+    token: string
+}
 class Router extends React.Component {
-    
     render() {
-        const token = '222'
+        const { token } = this.props as RouteProps;
         return (
             <HashRouter>
                 <Switch>

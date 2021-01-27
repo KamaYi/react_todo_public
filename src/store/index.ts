@@ -1,11 +1,13 @@
 import { createStore, combineReducers, applyMiddleware, compose, Middleware, Reducer } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reduxLogger from 'redux-logger';
-import { StoreState, IAction } from './types';
+import { StoreState, Action } from './types';
 import userReducer from './module/user';
+import settingsReducer from './module/settings';
 
-const reducers: Reducer<StoreState, IAction<any>> = combineReducers<StoreState>({
-  user: userReducer
+const reducers: Reducer<StoreState, Action<any>> = combineReducers<StoreState>({
+  user: userReducer,
+  settings: settingsReducer,
 });
 
 const middleware: Middleware[] = [reduxThunk];

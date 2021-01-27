@@ -1,17 +1,20 @@
 import logo from "@/assets/images/logo.svg";
-import { ExportOutlined, FormOutlined } from '@ant-design/icons';
-import { Tooltip,message } from 'antd';
+import { ExportOutlined, FormOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
+import { Tooltip, message } from 'antd';
 import { connect } from 'react-redux';
-import { RouteComponentProps,withRouter } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { updateSettings, Settings } from '@/store/module/settings';
 import { logout } from '@/store/module/user';
 import { StoreState } from '@/store/types';
 import './index.less'
-interface LayoutHeaderProps extends RouteComponentProps{
+interface LayoutHeaderProps extends RouteComponentProps {
     logout: () => void;
+    updateSettings: (settings: Settings) => {};
     realNameLast: string;
+    settings: Settings;
 }
 function LayoutHeader(props: LayoutHeaderProps) {
-    const { logout } = props;
+    const { logout, realNameLast, settings } = props;
     function onHeaderClick(type: string) {
         console.log('props: ', props);
         console.log('type: ', type);
@@ -19,23 +22,28 @@ function LayoutHeader(props: LayoutHeaderProps) {
             logout()
             message.info('退出成功')
             props.history.push('/login');
-            
+
         } else {
             message.info('问卷调查')
         }
     }
+    function onCollapsedClick() {
+        props.settings.collapsed = !props.settings.collapsed
+        props.updateSettings(props.settings)
+    }
     return (
         <div className="header-container">
-            <div className="logo" >
+            <div className="logo">
                 <img src={logo} className="sidebar-logo" alt="logo" />
                 <span className="color-primary">DataMap数据平台</span>
             </div>
+            <div className="collapsed vertical-middle" onClick={onCollapsedClick}>{props.settings.collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />} </div>
             <div className="right-option vertical-middle">
                 <Tooltip placement="bottom" title={'问题反馈'}>
                     <FormOutlined onClick={() => onHeaderClick('question')} />
                 </Tooltip>
-                <Tooltip placement="bottom" title={'欢迎使用'}>
-                    <div className="right-option_name">易</div>
+                <Tooltip placement="bottom" title={realNameLast + '，欢迎使用'}>
+                    <div className="right-option_name">{realNameLast}</div>
                 </Tooltip>
                 <Tooltip placement="bottom" title={'退出系统'}>
                     <ExportOutlined onClick={() => onHeaderClick('singOut')} />
@@ -44,10 +52,11 @@ function LayoutHeader(props: LayoutHeaderProps) {
         </div>
     );
 };
-export default withRouter(connect((state: StoreState) => {
+export default connect((state: StoreState) => {
     return {
-        realNameLast: state.user.realName.substring(state.user.realName.length - 1, state.user.realName.length)
+        realNameLast: state.user.realName.substring(state.user.realName.length - 1, state.user.realName.length),
+        settings: state.settings
     }
 }, {
-    logout,
-})(LayoutHeader));
+    logout, updateSettings
+})(withRouter(LayoutHeader));

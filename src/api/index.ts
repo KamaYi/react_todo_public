@@ -9,8 +9,15 @@ export interface UserLoginData {
 export function apiUserLogin(data: UserLoginData) {
     return request<UserState>({
         method: 'POST',
-        url: '/user/login',
+        url: '/api/login',
         data,
+    });
+}
+
+export function apiNav() {
+    return request({
+        method: 'GET',
+        url: '/api/nav'
     });
 }
 

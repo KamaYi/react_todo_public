@@ -17,28 +17,30 @@ const LayoutContent = (props: any) => {
     return (
         <div className="layout-content">
             <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>
-                <Helmet>
-                    <title>{title}</title>
-                    <meta name="description" content={title} />
-                </Helmet>
-                <div className="container">
-                    <Suspense fallback={<Spin className="layout__loading" />}>
-                        <TransitionGroup className="transitionGroup">
-                            <CSSTransition
-                                // key={location.pathname}
-                                timeout={500}
-                                classNames="fade"
-                                exit={false}
-                            >
-                                <Switch>
-                                    <Redirect exact from="/" to="/login" />
-                                    {routeList.map((menu: IRoute) => (
-                                        <Route exact key={menu.path} path={menu.path} component={menu.component}></Route>
-                                    ))}
-                                </Switch>
-                            </CSSTransition>
-                        </TransitionGroup>
-                    </Suspense>
+                <div className="scrollbar-content">
+                    <Helmet>
+                        <title>{title}</title>
+                        <meta name="description" content={title} />
+                    </Helmet>
+                    <div className="scrollbar-content_container">
+                        <Suspense fallback={<Spin className="layout__loading" />}>
+                            <TransitionGroup className="transitionGroup">
+                                <CSSTransition
+                                    // key={location.pathname}
+                                    timeout={500}
+                                    classNames="fade"
+                                    exit={false}
+                                >
+                                    <Switch>
+                                        <Redirect exact from="/" to="/login" />
+                                        {routeList.map((menu: IRoute) => (
+                                            <Route exact key={menu.path} path={menu.path} component={menu.component}></Route>
+                                        ))}
+                                    </Switch>
+                                </CSSTransition>
+                            </TransitionGroup>
+                        </Suspense>
+                    </div>
                 </div>
             </Scrollbars>
         </div>

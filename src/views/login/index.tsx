@@ -3,7 +3,7 @@ import { Input, Button, Form, Typography } from 'antd';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setUserInfo, UserState } from '@/store/module/user';
-import { apiUserLogin } from '@/api/system/index'
+import { apiUserLogin } from '@/api/index'
 import './index.less'
 
 interface LoginProps extends RouteComponentProps {

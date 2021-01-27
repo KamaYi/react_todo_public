@@ -6,7 +6,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/user');
+const apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ //此项必须在 bodyParser.json 下面,为参�
 }));
 
 app.use('/', indexRouter);
-app.use('/', usersRouter);
+app.use('/', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

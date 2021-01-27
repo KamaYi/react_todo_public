@@ -6,4 +6,8 @@
 }
 .sidebar-menu-container .ant-layout-sider {
   height: 100%;
+  color: #0b0f12;
+}
+.sidebar-menu-container .ant-layout-sider .ant-menu-submenu-title .anticon + span {
+  font-size: 16px;
 }

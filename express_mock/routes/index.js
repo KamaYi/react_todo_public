@@ -6,8 +6,8 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/test/code', function (req, res, next) {
-  res.send(400, { status: 400, mess: '密码错误' })
+router.get('/nav', function (req, res, next) {
+  res.json({ status: 200, msg: '欢迎登录',data: { token: '', realName: ''} })
 });
 
 

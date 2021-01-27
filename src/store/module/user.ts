@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { IAction } from '../types';
+import { Action } from '../types';
 import { getToken, setToken, removeToken } from '../../utils/cookie';
 import LocalStore from '../../utils/store';
 
@@ -26,21 +26,22 @@ const SET_USER_INFO = 'SET_USER_INFO';
 
 const SET_USER_LOGOUT = 'SET_USER_LOGOUT';
 
-export const setUserInfo: (user: UserState) => IAction<UserState> = (user: UserState) => ({
+export const setUserInfo: (user: UserState) => Action<UserState> = (user: UserState) => ({
     type: SET_USER_INFO,
     payload: user,
 });
 
-export const logout: () => IAction<null> = () => ({
+export const logout: () => Action<null> = () => ({
     type: SET_USER_LOGOUT,
     payload: null,
 });
 
-const userReducer: Reducer<UserState, IAction<any>> = (
+const userReducer: Reducer<UserState, Action<any>> = (
     state = defaultUser,
-    action: IAction<any>,
+    action: Action<any>,
 ) => {
     const { type, payload } = action;
+    console.log('action: ', action);
     switch (type) {
         case SET_USER_INFO:
             setToken(payload.token);

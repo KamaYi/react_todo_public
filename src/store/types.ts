@@ -1,9 +1,11 @@
 import { UserState } from './module/user';
+import { Settings } from './module/settings';
 
 export interface StoreState {
   user: UserState;
+  settings: Settings;
 }
-export interface IAction<T> {
+export interface Action<T> {
   type: string;
   payload: T;
 }
