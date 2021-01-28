@@ -71,6 +71,46 @@ const routes: IRoute[] = [
             },
           }
         ]
+      }, {
+        path: '/menu',
+        meta: {
+          title: '嵌套路由',
+        },
+        redirect: '/menu//menu1',
+        children: [
+          {
+            path: '/menu/menu1',
+            auth: false,
+            component: React.lazy(() => import('@/views/menu/menu1')),
+            meta: {
+              title: '菜单1',
+            },
+          },
+          {
+            path: '/menu/menu2',
+            auth: false,
+            meta: {
+              title: '菜单2',
+            },
+            children: [
+              {
+                path: '/menu/menu2/menu2_1',
+                auth: false,
+                component: React.lazy(() => import('@/views/menu/menu2/menu2_1')),
+                meta: {
+                  title: '菜单2_1',
+                },
+              }, {
+                path: '/menu/menu2/menu2_2',
+                auth: false,
+                component: React.lazy(() => import('@/views/menu/menu2/menu2_2')),
+                meta: {
+                  title: '菜单2_2',
+                },
+              }
+            ]
+          }
+        ]
       }
     ]
   }

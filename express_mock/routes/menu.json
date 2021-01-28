@@ -1,0 +1,2487 @@
+[
+    {
+        "id": "1",
+        "name": "首页",
+        "type": "menu",
+        "has_button": "0",
+        "child": []
+    },
+    {
+        "id": "16",
+        "name": "项目管理",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "16-1",
+                "name": "楼盘商机",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "16-1-1",
+                        "name": "楼盘商机-详情",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "16-1-1-2",
+                                "name": "编辑补充信息",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-1-1-1",
+                                "name": "分配拓展",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "16-2",
+                "name": "项目列表",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "16-2-1",
+                        "name": "项目列表-详情",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "16-2-1-43",
+                                "name": "查看扫描件",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-42",
+                                "name": "【合作规则】操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-41",
+                                "name": "打开上架",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-40",
+                                "name": "关联开发商楼盘",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-39",
+                                "name": "【报备设置】入口",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-37",
+                                "name": "【报备开关】按钮",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-35",
+                                "name": "编辑项目运营部门",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-34",
+                                "name": "编辑拓展负责人",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-33",
+                                "name": "申请特殊上架",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-31",
+                                "name": "申请下架（总公司）",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-29",
+                                "name": "发起上架（首次设置）",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-28",
+                                "name": "佣金方案",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-27",
+                                "name": "归档子合同",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-26",
+                                "name": "审核子合同扫描件",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-24",
+                                "name": "上传子合同扫描件",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-21",
+                                "name": "其它变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-20",
+                                "name": "商务条款变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-19",
+                                "name": "授权人变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-18",
+                                "name": "账户变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-17",
+                                "name": "续签",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-16",
+                                "name": "归档合同",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-15",
+                                "name": "审核合同扫描件",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-13",
+                                "name": "上传合同扫描件",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-10",
+                                "name": "创建主合同",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-7",
+                                "name": "创建进场函",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-6",
+                                "name": "编辑洽谈记录",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-5",
+                                "name": "查看洽谈记录",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-4",
+                                "name": "添加洽谈记录",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-3",
+                                "name": "删除策划方案",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-2",
+                                "name": "下载策划方案",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "16-2-1-1",
+                                "name": "添加策划方案",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "name": "机构",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "17-1",
+                "name": "机构管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "17-1-5",
+                        "name": "编辑",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-1-4",
+                        "name": "导出",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-1-3",
+                        "name": "新增",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-1-6",
+                        "name": "查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-1-1",
+                        "name": "查询机构列表",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "17-5",
+                "name": "经纪人管理",
+                "type": "menu",
+                "has_button": "0",
+                "child": []
+            },
+            {
+                "id": "17-2",
+                "name": "门店管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "17-2-5",
+                        "name": "编辑门店",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-2-4",
+                        "name": "导出",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-2-3",
+                        "name": "新增门店",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-2-2",
+                        "name": "查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-2-1",
+                        "name": "查看门店列表",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "17-4",
+                "name": "开户行变更审核",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "17-4-3",
+                        "name": "查看告知函",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-4-1",
+                        "name": "通过/驳回",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-4-2",
+                        "name": "列表查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "17-3",
+                "name": "网格管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "17-3-4",
+                        "name": "导出",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-3-3",
+                        "name": "编辑机构网格",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-3-2",
+                        "name": "新增机构网格",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "17-3-1",
+                        "name": "查看机构网格",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "name": "结算管理",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "18-4",
+                "name": "补充佣金",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "18-4-4",
+                        "name": "已驳回-查看",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-4-3",
+                        "name": "已通过-查看",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-4-2",
+                        "name": "待审核-复审查看",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-4-1",
+                        "name": "待审核-初审审核",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "18-1",
+                "name": "佣金方案",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "18-1-6",
+                        "name": "订单流方案列表",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-1-6-2",
+                                "name": "编辑/查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-6-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-1-5",
+                        "name": "应收节点列表",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-1-5-2",
+                                "name": "编辑/查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-5-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-1-4",
+                        "name": "应结方案列表",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-1-4-3",
+                                "name": "修改订单",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-4-2",
+                                "name": "编辑/查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-4-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-1-3",
+                        "name": "应收计算列表",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-1-3-4",
+                                "name": "修改订单",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-3-3",
+                                "name": "撤销/恢复",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-3-2",
+                                "name": "编辑/修改/查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-3-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-1-2",
+                        "name": "应结计算列表",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-1-2-4",
+                                "name": "修改订单",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-2-3",
+                                "name": "撤销/恢复",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-2-2",
+                                "name": "编辑/修改/查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-1-2-5",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-1-1",
+                        "name": "查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "18-2",
+                "name": "结佣管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "18-2-5",
+                        "name": "已驳回",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-2-5-3",
+                                "name": "明细表下载",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-5-2",
+                                "name": "查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-5-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-2-4",
+                        "name": "已发放",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-2-4-7",
+                                "name": "付款单复核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-4-6",
+                                "name": "付款单查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-4-5",
+                                "name": "明细表下载",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-4-4",
+                                "name": "查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-4-3",
+                                "name": "导出「付款申请表」",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-4-2",
+                                "name": "导出",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-4-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-2-3",
+                        "name": "待发放",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-2-3-8",
+                                "name": "付款单审核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-7",
+                                "name": "付款单申请",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-6",
+                                "name": "付款单查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-4",
+                                "name": "明细表下载",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-5",
+                                "name": "发放",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-3",
+                                "name": "查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-2",
+                                "name": "导出",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-3-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-2-2",
+                        "name": "复审",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-2-2-7",
+                                "name": "复核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-2-6",
+                                "name": "收到发票",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-2-5",
+                                "name": "初核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-2-4",
+                                "name": "明细表下载",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-2-3",
+                                "name": "查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-2-2",
+                                "name": "导出",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-2-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-2-1",
+                        "name": "初审",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-2-1-5",
+                                "name": "审核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-1-4",
+                                "name": "明细表下载",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-1-3",
+                                "name": "查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-1-2",
+                                "name": "导出",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-2-1-1",
+                                "name": "列表查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "18-3",
+                "name": "回款管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "18-3-4",
+                        "name": "结算单详情",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "18-3-4-8",
+                                "name": "【下载】回款确认单",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-3-4-9",
+                                "name": "【下载发票回执单】",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "18-3-4-6",
+                                "name": "【下载开票申请单】",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "18-3-9",
+                        "name": "导出",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-3-8",
+                        "name": "【回款】",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-3-7",
+                        "name": "【撤销】",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-3-6",
+                        "name": "【归档】",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-3-5",
+                        "name": "【开票】",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-3-3",
+                        "name": "【查看】",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "18-3-1",
+                        "name": "列表页",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "23",
+        "name": "订单管理",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "23-3",
+                "name": "补录订单",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "23-3-2",
+                        "name": "详情页",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "23-3-2-1",
+                                "name": "【确定】操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "23-3-1",
+                        "name": "列表页",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "23-3-1-2",
+                                "name": "查看列表",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "23-3-1-1",
+                                "name": "【补录订单】操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "23-2",
+                "name": "订单审核",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "23-2-2",
+                        "name": "成交审核",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "23-2-2-4",
+                                "name": "列表-查看【客户跟进记录】",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "23-2-2-2",
+                                "name": "详情页",
+                                "type": "button",
+                                "has_button": "1",
+                                "child": [
+                                    {
+                                        "id": "23-2-2-2-4",
+                                        "name": "【修改订单基础信息】",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-2-2-3",
+                                        "name": "【修改订单核心信息】",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-2-2-2",
+                                        "name": "【通过/驳回】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-2-2-1",
+                                        "name": "【确定】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "23-2-2-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "23-2-4",
+                        "name": "修改订单审核",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "23-2-4-2",
+                                "name": "详情页",
+                                "type": "button",
+                                "has_button": "1",
+                                "child": [
+                                    {
+                                        "id": "23-2-4-2-2",
+                                        "name": "【通过/驳回】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-4-2-1",
+                                        "name": "【确定】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "23-2-4-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "23-2-3",
+                        "name": "超72小时审核",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "23-2-3-2",
+                                "name": "详情页",
+                                "type": "button",
+                                "has_button": "1",
+                                "child": [
+                                    {
+                                        "id": "23-2-3-2-3",
+                                        "name": "【驳回】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-3-2-2",
+                                        "name": "【通过】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-3-2-1",
+                                        "name": "【确定】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "23-2-3-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "23-2-1",
+                        "name": "退户审核",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "23-2-1-5",
+                                "name": "详情页",
+                                "type": "button",
+                                "has_button": "1",
+                                "child": [
+                                    {
+                                        "id": "23-2-1-5-3",
+                                        "name": "财务审核-【通过/驳回】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-1-5-2",
+                                        "name": "内审审核-【通过/驳回】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "23-2-1-5-1",
+                                        "name": "【确定】操作",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "23-2-1-4",
+                                "name": "列表-【追回】佣金操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "23-2-1-3",
+                                "name": "列表-【退还】佣金操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "23-2-1-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "23-1",
+                "name": "订单列表",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "23-1-2",
+                        "name": "导出",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "23-1-1",
+                        "name": "列表页",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "23-4",
+                "name": "客源列表",
+                "type": "menu",
+                "has_button": "0",
+                "child": []
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "name": "垫佣管理",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "20-3",
+                "name": "垫佣账户",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "20-3-4",
+                        "name": "修改",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "20-3-3",
+                        "name": "新增",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "20-3-1",
+                        "name": "列表",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "20-2",
+                "name": "垫佣项目",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "20-2-6",
+                        "name": "自有资金",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "20-2-11",
+                                "name": "添加垫佣楼盘",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-10",
+                                "name": "审核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-9",
+                                "name": "编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-8",
+                                "name": "查看垫佣项目详情页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-7",
+                                "name": "列表页查询/重置操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "20-2-0",
+                        "name": "58金融",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "20-2-5",
+                                "name": "添加垫佣楼盘",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-4",
+                                "name": "审核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-3",
+                                "name": "编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-2",
+                                "name": "查看垫佣项目详情页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-2-1",
+                                "name": "列表页查询/重置操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "20-1",
+                "name": "垫佣订单",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "20-1-1",
+                        "name": "58金融",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "20-1-1-24",
+                                "name": "标记出金失败",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-23",
+                                "name": "制作利润出金表",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-22",
+                                "name": "还款",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-21",
+                                "name": "资方审变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-18",
+                                "name": "资方审编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-17",
+                                "name": "复审变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-14",
+                                "name": "复审编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-11",
+                                "name": "复审发起",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-10",
+                                "name": "制作应收账款转让确认书",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-9",
+                                "name": "初审变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-6",
+                                "name": "初审编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-3",
+                                "name": "初审待发起",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-2",
+                                "name": "查看垫佣详情页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-1-1",
+                                "name": "列表页查询/重置操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "20-1-2",
+                        "name": "自有资金",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "20-1-2-10",
+                                "name": "初审变更",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-2-7",
+                                "name": "初审编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-2-6",
+                                "name": "初审审核",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-2-3",
+                                "name": "初审发起",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-2-2",
+                                "name": "查看垫佣详情页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "20-1-2-1",
+                                "name": "列表页查询/重置操作",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "20-1-3",
+                        "name": "历史记录",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "20-1-3-1",
+                                "name": "查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "name": "活动管理",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "19-1",
+                "name": "奖励配置",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "19-1-2",
+                        "name": "成交奖",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-1-2-5",
+                                "name": "【删除】成交奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-2-4",
+                                "name": "【查看】成交奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-2-3",
+                                "name": "【修改】成交奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-2-2",
+                                "name": "【新建】成交奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-2-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "19-1-1",
+                        "name": "带看奖",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-1-1-5",
+                                "name": "【删除】带看奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-1-4",
+                                "name": "【查看】带看奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-1-3",
+                                "name": "【修改】带看奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-1-2",
+                                "name": "【新建】带看奖活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-1-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "19-1-3",
+                        "name": "奖励发放报表",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-1-3-5",
+                                "name": "【已发放】",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-3-4",
+                                "name": "【确认打款】",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-3-3",
+                                "name": "【批量打款】",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-3-2",
+                                "name": "导出",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-1-3-1",
+                                "name": "列表页",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "19-4",
+                "name": "活动配置",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "19-4-1",
+                        "name": "58新房活动",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-4-1-6",
+                                "name": "活动列表页-编辑活动-楼盘信息",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-1-5",
+                                "name": "活动列表页-编辑活动-基础信息",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-1-4",
+                                "name": "活动列表页-查看日志",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-1-3",
+                                "name": "活动列表页-上下架",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-1-2",
+                                "name": "活动列表页-搜索/查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-1-1",
+                                "name": "创建活动",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "19-4-2",
+                        "name": "运营素材",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-4-2-4",
+                                "name": "活动列表页-编辑素材",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-2-3",
+                                "name": "活动列表页-查看日志",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-2-2",
+                                "name": "活动列表页-搜索/查询",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-4-2-1",
+                                "name": "新建素材",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "19-4-3",
+                        "name": "云爆弹优惠配置",
+                        "type": "menu",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-4-4",
+                        "name": "移动经纪人活动",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-4-4-2",
+                                "name": "推荐盘设置",
+                                "type": "button",
+                                "has_button": "1",
+                                "child": [
+                                    {
+                                        "id": "19-4-4-2-1",
+                                        "name": "新建活动/编辑活动（活动主题、楼盘、模块标题、标签）",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "19-4-4-1",
+                                "name": "移动经纪人楼盘活动",
+                                "type": "button",
+                                "has_button": "1",
+                                "child": [
+                                    {
+                                        "id": "19-4-4-1-6",
+                                        "name": "关联楼盘",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "19-4-4-1-5",
+                                        "name": "推广活动（列表快筛）",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "19-4-4-1-3",
+                                        "name": "日志",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "19-4-4-1-2",
+                                        "name": "查询活动（城市、名称、状态）",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    },
+                                    {
+                                        "id": "19-4-4-1-1",
+                                        "name": "创建活动/编辑活动",
+                                        "type": "button",
+                                        "has_button": "0",
+                                        "child": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "19-5",
+                "name": "C端运营位配置",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "19-5-7",
+                        "name": "活动列表页-编辑banner/主题包/浮窗",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-5-6",
+                        "name": "活动列表页-查看日志",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-5-5",
+                        "name": "活动列表页-上下架",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-5-4",
+                        "name": "活动列表页-搜索/查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-5-3",
+                        "name": "新建浮窗",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-5-2",
+                        "name": "新建主题包",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "19-5-1",
+                        "name": "新建banner",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "19-6",
+                "name": "B端运营位配置",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "19-6-1",
+                        "name": "新建Banner/新建弹屏/上架/下架/日志/编辑/运营位查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "19-3",
+                "name": "商品管理",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "19-3-1",
+                        "name": "支付单配置",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-3-1-3",
+                                "name": "查看",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-1-2",
+                                "name": "日志",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-1-1",
+                                "name": "创建支付单",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "19-3-2",
+                        "name": "商品配置",
+                        "type": "menu",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "19-3-2-6",
+                                "name": "日志",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-2-5",
+                                "name": "导出",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-2-4",
+                                "name": "关联房源",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-2-3",
+                                "name": "编辑商品",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-2-2",
+                                "name": "创建商品",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "19-3-2-1",
+                                "name": "导入",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "19-7",
+                "name": "探盘数据",
+                "type": "menu",
+                "has_button": "0",
+                "child": []
+            }
+        ]
+    },
+    {
+        "id": "26",
+        "name": "销控配置",
+        "type": "menu",
+        "has_button": "0",
+        "child": []
+    },
+    {
+        "id": "21",
+        "name": "城市设置",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "21-5",
+                "name": "城市法人信息",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "21-5-2",
+                        "name": "详情页",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "21-5-2-2",
+                                "name": "删除",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-5-2-1",
+                                "name": "编辑",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "21-5-1",
+                        "name": "列表页",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "21-5-1-1",
+                                "name": "新增",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "21-4",
+                "name": "流量配置",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "21-4-3",
+                        "name": "楼盘配置",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "21-4-3-6",
+                                "name": "删除竞盘",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-3-5",
+                                "name": "查看竞盘",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-3-4",
+                                "name": "合作盘定向分配",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-3-3",
+                                "name": "查看合作盘列表",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-3-2",
+                                "name": "分销盘定向分配",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-3-1",
+                                "name": "查看分销盘列表",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "21-4-2",
+                        "name": "区域配置",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "21-4-2-2",
+                                "name": "区域定向分配",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-2-1",
+                                "name": "查看区域列表",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "21-4-1",
+                        "name": "城市配置",
+                        "type": "button",
+                        "has_button": "1",
+                        "child": [
+                            {
+                                "id": "21-4-1-4",
+                                "name": "查看日志",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-1-3",
+                                "name": "修改城市配置",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-1-2",
+                                "name": "查看分配详情",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            },
+                            {
+                                "id": "21-4-1-1",
+                                "name": "查看城市列表",
+                                "type": "button",
+                                "has_button": "0",
+                                "child": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "21-1",
+                "name": "部门管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "21-1-3",
+                        "name": "删除",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "21-1-2",
+                        "name": "编辑",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "21-1-1",
+                        "name": "新建",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "21-1-4",
+                        "name": "查询",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "21-2",
+                "name": "城市管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "21-2-3",
+                        "name": "上架&下架",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "21-2-2",
+                        "name": "编辑城市",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "21-2-1",
+                        "name": "新建城市",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "24",
+        "name": "OA审批",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "24-2",
+                "name": "已发流程",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "24-2-2",
+                        "name": "查看已发流程的进展",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "24-1",
+                "name": "发起流程",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "24-1-1",
+                        "name": "查看可发流程及提交流程申请",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "22",
+        "name": "系统设置",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "22-1",
+                "name": "角色管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "22-1-5",
+                        "name": "权限分配",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-1-3",
+                        "name": "删除 ",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-1-2",
+                        "name": "编辑",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-1-1",
+                        "name": "新建",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "22-2",
+                "name": "账号管理",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "22-2-5",
+                        "name": "管理城市权限分配",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-2-4",
+                        "name": "冻结|正常",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-2-2",
+                        "name": "编辑",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            },
+            {
+                "id": "22-3",
+                "name": "城市部门通用模板",
+                "type": "menu",
+                "has_button": "1",
+                "child": [
+                    {
+                        "id": "22-3-3",
+                        "name": "删除",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-3-2",
+                        "name": "编辑",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "22-3-1",
+                        "name": "新建",
+                        "type": "button",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "28",
+        "name": "路由嵌套",
+        "type": "menu",
+        "has_button": "0",
+        "child": [
+            {
+                "id": "28-1",
+                "name": "菜单1",
+                "type": "menu",
+                "has_button": "0",
+                "child": []
+            },
+            {
+                "id": "28-2",
+                "name": "菜单2",
+                "type": "menu",
+                "has_button": "0",
+                "child": [
+                    {
+                        "id": "28-2-1",
+                        "name": "菜单2-1",
+                        "type": "menu",
+                        "has_button": "0",
+                        "child": []
+                    },
+                    {
+                        "id": "28-2-2",
+                        "name": "菜单2-2",
+                        "type": "menu",
+                        "has_button": "0",
+                        "child": []
+                    }
+                ]
+            }
+        ]
+    }
+]
