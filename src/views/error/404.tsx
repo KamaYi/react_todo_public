@@ -10,7 +10,7 @@ function Error404() {
             subTitle="系统提示：您访问的页面不存在，我们已经上报管理员，尽快修复。"
             extra={
                 <Button type="primary">
-                    <Link to="/">返回首页</Link>
+                    <Link to="/welcome">返回首页</Link>
                 </Button>
             }
         />
