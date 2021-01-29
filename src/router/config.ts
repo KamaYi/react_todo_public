@@ -28,84 +28,76 @@ export interface IRoute extends IRouteBase {
 
 const routes: IRoute[] = [
   {
-    path: '/',
-    component: React.lazy(() => import('@/views/layout')),
+    path: '/login',
+    component: React.lazy(() => import(/*webpackChunkName:'Login'*/'@/views/login')),
     meta: {
-      title: '系统路由',
+      title: '登录',
+    }
+  }, {
+    path: '/welcome',
+    component: React.lazy(() => import(/*webpackChunkName:'Welcome'*/'@/views/welcome')),
+    meta: {
+      title: '欢迎页',
+    }
+  }, {
+    path: '/error',
+    meta: {
+      title: '错误页面',
     },
-    redirect: '/welcome',
     children: [
       {
-        path: '/login',
-        component: React.lazy(() => import(/*webpackChunkName:'Login'*/'@/views/login')),
+        path: '/error/404',
+        auth: false,
+        component: React.lazy(() => import('@/views/error/404')),
         meta: {
-          title: '登录',
-        }
-      }, {
-        path: '/welcome',
-        component: React.lazy(() => import(/*webpackChunkName:'Welcome'*/'@/views/welcome')),
-        meta: {
-          title: '欢迎页',
-        }
-      }, {
-        path: '/error',
-        meta: {
-          title: '错误页面',
+          title: '页面不存在',
         },
-        redirect: '/error/404',
+      },
+      {
+        path: '/error/403',
+        auth: false,
+        component: React.lazy(() => import('@/views/error/403')),
+        meta: {
+          title: '暂无权限',
+        },
+      }
+    ]
+  }, {
+    path: '/menu',
+    meta: {
+      title: '嵌套路由',
+    },
+    children: [
+      {
+        path: '/menu/menu1',
+        component: React.lazy(() => import('@/views/menu/menu1')),
+        meta: {
+          title: '菜单1',
+        },
+      },
+      {
+        path: '/menu/menu2',
+        meta: {
+          title: '菜单2',
+        },
         children: [
           {
-            path: '/error/404',
-            auth: false,
-            component: React.lazy(() => import('@/views/error/404')),
+            path: '/menu/menu2/menu2_1',
+            component: React.lazy(() => import('@/views/menu/menu2/menu2_1')),
             meta: {
-              title: '页面不存在',
+              title: '菜单2_1',
             },
-          },
-          {
-            path: '/error/403',
-            auth: false,
-            component: React.lazy(() => import('@/views/error/403')),
+          }, {
+            path: '/menu/menu2/menu2_2',
+            component: React.lazy(() => import('@/views/menu/menu2/menu2_2')),
             meta: {
-              title: '暂无权限',
+              title: '菜单2_2',
             },
-          }
-        ]
-      }, {
-        path: '/menu',
-        meta: {
-          title: '嵌套路由',
-        },
-        redirect: '/menu//menu1',
-        children: [
-          {
-            path: '/menu/menu1',
-            auth: false,
-            component: React.lazy(() => import('@/views/menu/menu1')),
-            meta: {
-              title: '菜单1',
-            },
-          },
-          {
-            path: '/menu/menu2',
-            auth: false,
-            meta: {
-              title: '菜单2',
-            },
-            children: [
-              {
-                path: '/menu/menu2/menu2_1',
-                auth: false,
-                component: React.lazy(() => import('@/views/menu/menu2/menu2_1')),
+            children: [{
+                path: '/menu/menu2/menu2_2/men2_2_details',
+                component: React.lazy(() => import('@/views/menu/menu2/menu2_2/men2_2_details')),
                 meta: {
-                  title: '菜单2_1',
-                },
-              }, {
-                path: '/menu/menu2/menu2_2',
-                auth: false,
-                component: React.lazy(() => import('@/views/menu/menu2/menu2_2')),
-                meta: {
-                  title: '菜单2_2',
+                  title: '菜单2_2_详情',
                 },
               }
             ]

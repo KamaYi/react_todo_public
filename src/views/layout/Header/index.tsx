@@ -16,8 +16,6 @@ interface LayoutHeaderProps extends RouteComponentProps {
 function LayoutHeader(props: LayoutHeaderProps) {
     const { logout, realNameLast, settings } = props;
     function onHeaderClick(type: string) {
-        console.log('props: ', props);
-        console.log('type: ', type);
         if (type === 'singOut') {
             logout()
             message.info('退出成功')

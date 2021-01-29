@@ -11,7 +11,8 @@ interface RouteProps {
 class Router extends React.Component {
     render() {
         const { token } = this.props as RouteProps;
-        return (
+        console.log('token: ', token);
+        return ( // 处理未登陆状态能访问的页面
             <HashRouter>
                 <Switch>
                     <Route exact path="/login" component={Login} />
@@ -28,7 +29,7 @@ class Router extends React.Component {
                 </Switch>
             </HashRouter>
         );
-    }
+}
 }
 
 export default connect((state: StoreState) => {
