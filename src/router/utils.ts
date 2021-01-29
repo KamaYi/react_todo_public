@@ -9,8 +9,6 @@ import LocalStore from '@/utils/store'
  */
 const flattenRoutes = (routeArray: any) =>
   routeArray.reduce((pre: any, cur: IRoute) => {
-    console.log('cur: ', cur);
-    console.log(typeof cur.auth !== 'undefined');
     pre.push({
       ...cur,
       auth: typeof cur.auth !== 'undefined' ? cur.auth : true
