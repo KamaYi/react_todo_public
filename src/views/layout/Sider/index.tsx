@@ -55,11 +55,11 @@ function LayoutSider(props: LayoutSiderProps) {
     function createMenuListMap(menuList: any) {
         return menuList.reduce((pre: any, item: MenuList, index: number) => {
             console.log('item: ', item.id);
-            if ((!Number(item.has_button) && item.child.length)) {
+            if ((!Number(item.has_button) && item.child.length)) { // item.has_button-页面是否有按钮权限
                 // 如果当前循环到的菜单项有 child，那就返回 SubMenu，否则返回的直接是 Menu.Item
                 pre.push(
                     <SubMenu
-                        className={['23-2','20-1','20-2','19-1','19-4','19-3'].find((itemA: any) => itemA === item.id) ? 'next-title' : ''}
+                        className={['3-2'].find((itemA: any) => itemA === item.id) ? 'next-title' : ''}
                         key={item.id}
                         title={
                             <span>
@@ -76,7 +76,7 @@ function LayoutSider(props: LayoutSiderProps) {
                 );
             } else {
                 pre.push(
-                    <Menu.Item className={['1','26'].find((itemA: any) => itemA === item.id) ? 'first-title' : ''} key={item.id} onClick={() => clickMenu(item)}>
+                    <Menu.Item className={['1','4'].find((itemA: any) => itemA === item.id) ? 'first-title' : ''} key={item.id} onClick={() => clickMenu(item)}>
                         <TeamOutlined />
                         <span>{item.name}</span>
                     </Menu.Item>

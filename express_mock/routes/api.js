@@ -3,7 +3,6 @@ var router = express.Router();
 const Mock = require('mockjs');
 const jwt = require('jsonwebtoken');
 var menuData = require('./menu.json');
-console.log('menuData: ', menuData);
 
 /* GET api listing. */
 router.post('/', function (req, res, next) {
@@ -11,8 +10,6 @@ router.post('/', function (req, res, next) {
 });
 
 router.post('/api/login', function (req, res, next) {
-  console.log(req.body);
-  console.log('menuData: ', menuData);
   let account = req.body.account;
   let password = req.body.password;
 

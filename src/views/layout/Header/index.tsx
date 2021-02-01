@@ -41,7 +41,7 @@ function LayoutHeader(props: LayoutHeaderProps) {
             <div className="collapsed vertical-middle" onClick={onCollapsedClick}>{props.settings.collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />} </div>
             <div className="right-option vertical-middle">
                 <Tooltip placement="bottom" title={'问题反馈'}>
-                    <FormOutlined onClick={() => onHeaderClick('question')} />
+                    <FormOutlined className={'question'} onClick={() => onHeaderClick('question')} />
                 </Tooltip>
                 <Tooltip placement="bottom" title={realNameLast + '，欢迎使用'}>
                     <div className="right-option_name">{realNameLast}</div>
