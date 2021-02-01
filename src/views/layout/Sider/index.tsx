@@ -26,7 +26,7 @@ function LayoutSider(props: LayoutSiderProps) {
     const { Sider } = Layout;
     const { SubMenu } = Menu;
     const settings = props.settings;
-    
+
     const [menuList, setMenuList] = useState<Array<MenuList>>([]);
     const initMenuList = async () => {
         const data: any = await apiNav();
@@ -38,7 +38,7 @@ function LayoutSider(props: LayoutSiderProps) {
     }, []);
 
     const clickMenu = (item: MenuList) => {
-        
+
         // 点击子集菜单记录id
         let subscript: number = 0;
         settings.defaultOpenKeys.find((ele, index) => {
@@ -47,17 +47,19 @@ function LayoutSider(props: LayoutSiderProps) {
         subscript ? settings.defaultOpenKeys.splice(subscript, 1) : settings.defaultOpenKeys.push(item.id);
         settings.defaultSelectedKeys = item.id;
         props.updateSettings(settings);
-        
+
         props.history.push(routeKeysMap[item.id] ? routeKeysMap[item.id] : '/error/404') // 页面路由跳转
     };
-    
+
     // 利用 createMenuListMap 的递归调用实现菜单的动态创建，当 menuList 值改变时，菜单也会动态改变，可以将此方法声明成单独的组件，传值 list，并返回 JSX 节点列表
     function createMenuListMap(menuList: any) {
-        return menuList.reduce((pre: any, item: MenuList) => {
-            if (!Number(item.has_button) && item.child.length) {
+        return menuList.reduce((pre: any, item: MenuList, index: number) => {
+            console.log('item: ', item.id);
+            if ((!Number(item.has_button) && item.child.length)) {
                 // 如果当前循环到的菜单项有 child，那就返回 SubMenu，否则返回的直接是 Menu.Item
                 pre.push(
                     <SubMenu
+                        className={['23-2','20-1','20-2','19-1','19-4','19-3'].find((itemA: any) => itemA === item.id) ? 'next-title' : ''}
                         key={item.id}
                         title={
                             <span>
@@ -74,7 +76,7 @@ function LayoutSider(props: LayoutSiderProps) {
                 );
             } else {
                 pre.push(
-                    <Menu.Item key={item.id} onClick={() => clickMenu(item)}>
+                    <Menu.Item className={['1','26'].find((itemA: any) => itemA === item.id) ? 'first-title' : ''} key={item.id} onClick={() => clickMenu(item)}>
                         <TeamOutlined />
                         <span>{item.name}</span>
                     </Menu.Item>
