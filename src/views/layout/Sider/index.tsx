@@ -30,7 +30,7 @@ function LayoutSider(props: LayoutSiderProps) {
     const [menuList, setMenuList] = useState<Array<MenuList>>([]);
     const initMenuList = async () => {
         const data: any = await apiNav();
-        
+        console.log('菜单刷新了-------: ', data);
         setMenuList(data.menuList);
     };
     useEffect(() => {

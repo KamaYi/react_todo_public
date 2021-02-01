@@ -18,6 +18,9 @@ const LayoutContent = (props: any) => {
     console.log('routeList: ', routeList);
     const { role, location } = props;
     const { pathname } = location;
+    console.log('====================================');
+    console.log('内容区域刷新了');
+    console.log('====================================');
     return (
         <div className="layout-content">
             <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>

@@ -40,6 +40,12 @@ const routes: IRoute[] = [
       title: '欢迎页',
     }
   }, {
+    path: '/useRef',
+    component: React.lazy(() => import(/*webpackChunkName:'useRef'*/'@/views/test/useRef')),
+    meta: {
+      title: 'useRef',
+    }
+  }, {
     path: '/error',
     meta: {
       title: '错误页面',
