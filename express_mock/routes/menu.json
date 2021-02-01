@@ -78,35 +78,6 @@
                         "child": []
                     }
                 ]
-            },
-            {
-                "id": "2-3",
-                "name": "城市部门通用模板",
-                "type": "menu",
-                "has_button": "1",
-                "child": [
-                    {
-                        "id": "2-3-3",
-                        "name": "删除",
-                        "type": "button",
-                        "has_button": "0",
-                        "child": []
-                    },
-                    {
-                        "id": "2-3-2",
-                        "name": "编辑",
-                        "type": "button",
-                        "has_button": "0",
-                        "child": []
-                    },
-                    {
-                        "id": "2-3-1",
-                        "name": "新建",
-                        "type": "button",
-                        "has_button": "0",
-                        "child": []
-                    }
-                ]
             }
         ]
     },

@@ -54,7 +54,6 @@ function LayoutSider(props: LayoutSiderProps) {
     // 利用 createMenuListMap 的递归调用实现菜单的动态创建，当 menuList 值改变时，菜单也会动态改变，可以将此方法声明成单独的组件，传值 list，并返回 JSX 节点列表
     function createMenuListMap(menuList: any) {
         return menuList.reduce((pre: any, item: MenuList, index: number) => {
-            console.log('item: ', item.id);
             if ((!Number(item.has_button) && item.child.length)) { // item.has_button-页面是否有按钮权限
                 // 如果当前循环到的菜单项有 child，那就返回 SubMenu，否则返回的直接是 Menu.Item
                 pre.push(

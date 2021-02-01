@@ -43,6 +43,12 @@ function getRouteList(): IRoute[] { // 本地遍历后的路由一维数组暂�
 export const routeList = getRouteList()
 console.log('routeList: ', routeList);
 
+export function getPageTitle(pathname: string): string {
+  const route = routeList.find(child => child.path === pathname);
+  return route ? route.meta.title : '';
+}
+
+
 function findRoutesByPaths(pathList: string[], routeList: IRoute[]): IRoute[] {
   return routeList.filter(
     (child: IRoute) => pathList.indexOf(child.path) !== -1,
@@ -109,7 +115,6 @@ const watermark = ({
   if (MutationObserver) {
     let mo = new MutationObserver(function () {
       const __wm = document.querySelector('.__wm')
-      console.log(__wm)
       // 只在__wm元素变动才重新调用 __canvasWM
       if ((__wm && __wm.getAttribute('style') !== styleStr) || !__wm) {
         // 避免一直触发
