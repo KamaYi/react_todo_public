@@ -15,7 +15,9 @@ import './index.less'
 
 const LayoutContent = () => {
     const history = useHistory()
+    console.log('history: ', history);
     const { pathname } = history.location;
+    console.log('pathname: ', pathname === '/');
     const title = getPageTitle(pathname);
     console.log('====================================');
     console.log('内容区域刷新了');
@@ -38,7 +40,7 @@ const LayoutContent = () => {
                                         exit={false}
                                     >
                                         <Switch>
-                                            <Route exact path="/" to='/welcome' />
+                                            <Route exact path="/" render={() => <Redirect to="/welcome" />} />
                                             {routeList.map((route: IRoute) => (
                                                 <Route exact key={config.BASENAME + route.path} path={route.path} component={route.component}></Route>
                                             ))}

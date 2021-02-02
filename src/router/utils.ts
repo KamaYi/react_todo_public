@@ -64,11 +64,11 @@ export function getBreadcrumbs(pathList: string[]): IRoute[] {
 const watermark = ({
   // 使用 ES6 的函数默认值方式设置参数的默认取值
   container = document.body,
-  width = '250px',
-  height = '160px',
+  width = '200px',
+  height = '100px',
   textAlign = 'left',
   textBaseline = 'bottom',
-  font = '20px Microsoft Yahei',
+  font = '14px Microsoft Yahei',
   fillStyle = 'rgba(184, 184, 184, 0.4)',
   content = '水印内容',
   content2 = '',

@@ -13,7 +13,6 @@ class Router extends React.Component {
 
     render() {
         const { token } = this.props as RouteProps;
-        console.log('token: ', token);
         watermark({
             content: '水印内容',
             container: document.querySelector('#root') as any
