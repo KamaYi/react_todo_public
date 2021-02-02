@@ -3,7 +3,7 @@ import { UserOutlined, TeamOutlined } from '@ant-design/icons';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { apiNav } from '@/api/index';
 import { useEffect, useState, memo } from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateSettings, Settings } from '@/store/module/settings';
 import { StoreState } from '@/store/types';
@@ -18,7 +18,7 @@ interface MenuList {
     has_button: string;
 }
 
-interface LayoutSiderProps extends RouteComponentProps {
+interface LayoutSiderProps {
     updateSettings: (settings: Settings) => {};
     settings: Settings;
 }
@@ -26,6 +26,7 @@ function LayoutSider(props: LayoutSiderProps) {
     const { Sider } = Layout;
     const { SubMenu } = Menu;
     const settings = props.settings;
+    const history = useHistory()
 
     const [menuList, setMenuList] = useState<Array<MenuList>>([]);
     const initMenuList = async () => {
@@ -47,8 +48,7 @@ function LayoutSider(props: LayoutSiderProps) {
         subscript ? settings.defaultOpenKeys.splice(subscript, 1) : settings.defaultOpenKeys.push(item.id);
         settings.defaultSelectedKeys = item.id;
         props.updateSettings(settings);
-
-        props.history.push(routeKeysMap[item.id] ? routeKeysMap[item.id] : '/error/404') // 页面路由跳转
+        routeKeysMap[item.id] ? history.push(routeKeysMap[item.id]) : history.replace('/error/404')
     };
 
     // 利用 createMenuListMap 的递归调用实现菜单的动态创建，当 menuList 值改变时，菜单也会动态改变，可以将此方法声明成单独的组件，传值 list，并返回 JSX 节点列表
@@ -109,4 +109,4 @@ export default connect(
         return { settings: state.settings };
     },
     { updateSettings }
-)(memo(withRouter(LayoutSider)));
+)(memo(LayoutSider));

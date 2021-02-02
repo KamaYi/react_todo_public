@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect } from 'react';
-import { useHistory, Link, withRouter, RouteComponentProps } from 'react-router-dom';
+import { useHistory, Link} from 'react-router-dom';
 import { Breadcrumb } from 'antd';
-import { IRoute, IRouteBase } from '@/router/config';
+import { IRoute} from '@/router/config';
 import './index.less';
 import { getBreadcrumbs } from '@/router/utils';
 import { routeList } from '@/router/utils';
@@ -10,22 +10,24 @@ interface Path {
     pathname: string;
 }
 
-function Breadcrumbs(props: RouteComponentProps) {
+function Breadcrumbs() {
     const [breadcrumbs, setBreadcrumbs] = useState<IRoute[]>([]);
 
     const history = useHistory();
-
+    console.log('history: ', history);
+    const filterArrayBreadcrums = (pathname: string) => {
+        return pathname.split('/').filter(Boolean).map((value, index, array) => '/'.concat(array.slice(0, index + 1).join('/')))
+    }
     useEffect(() => {
-        history.listen((path: Path) => {
-            let pathList: string[] = path.pathname.split('/').filter(Boolean).map((value, index, array) => '/'.concat(array.slice(0, index + 1).join('/')))
-            console.log('pathList: ', pathList);
-            setBreadcrumbs(getBreadcrumbs(pathList));
+        setBreadcrumbs(getBreadcrumbs(filterArrayBreadcrums(history.location.pathname))); // 初次加载
+        history.listen((path: Path) => { // 监听路由辩护变化
+            setBreadcrumbs(getBreadcrumbs(filterArrayBreadcrums(history.location.pathname)));
         })
     }, []);
     function toLink(link: IRoute) {
         console.log('link: ', link);
         let findItem: any = routeList.find(item => item.path === link.path)
-        props.history.push(findItem.path)
+        history.push(findItem.path)
     }
     return (
         <div className="breadcrumb-container">
@@ -44,4 +46,4 @@ function Breadcrumbs(props: RouteComponentProps) {
     );
 }
 
-export default withRouter(memo(Breadcrumbs));
+export default memo(Breadcrumbs);

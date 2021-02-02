@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
-import { Layout, Breadcrumb, Spin } from 'antd';
-import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import { Layout, Spin } from 'antd';
+import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import DocumentTitle from "react-document-title";
 import { Helmet } from 'react-helmet';
 import { routeList } from '@/router/utils';
@@ -13,9 +13,9 @@ import { getPageTitle } from '@/router/utils';
 
 import './index.less'
 
-const LayoutContent = (props: any) => {
-    const { location } = props;
-    const { pathname } = location;
+const LayoutContent = () => {
+    const history = useHistory()
+    const { pathname } = history.location;
     const title = getPageTitle(pathname);
     console.log('====================================');
     console.log('内容区域刷新了');
@@ -54,4 +54,4 @@ const LayoutContent = (props: any) => {
         </DocumentTitle>
     );
 };
-export default withRouter(LayoutContent);
+export default LayoutContent;
