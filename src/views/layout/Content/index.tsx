@@ -9,6 +9,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Breadcrumbs from '@/components/Breadcrumb'
 import config from '@/config';
+import Welcome from '@/views/welcome'
 import { getPageTitle } from '@/router/utils';
 
 import './index.less'
@@ -40,7 +41,8 @@ const LayoutContent = () => {
                                         exit={false}
                                     >
                                         <Switch>
-                                            <Route exact path="/" render={() => <Redirect to="/welcome" />} />
+                                            <Route exact path="/" component={Welcome} />
+                                            {/* <Route exact path="/" render={() => <Redirect to="/welcome" />} /> */}
                                             {routeList.map((route: IRoute) => (
                                                 <Route exact key={config.BASENAME + route.path} path={route.path} component={route.component}></Route>
                                             ))}
