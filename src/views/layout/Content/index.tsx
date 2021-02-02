@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Layout, Spin } from 'antd';
-import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory,withRouter } from 'react-router-dom';
 import DocumentTitle from "react-document-title";
 import { Helmet } from 'react-helmet';
 import { routeList } from '@/router/utils';
@@ -11,15 +11,20 @@ import Breadcrumbs from '@/components/Breadcrumb'
 import config from '@/config';
 import Welcome from '@/views/welcome'
 import { getPageTitle } from '@/router/utils';
+import { useEffect, useState } from 'react';
 
 import './index.less'
 
 const LayoutContent = () => {
     const history = useHistory()
-    console.log('history: ', history);
-    const { pathname } = history.location;
-    console.log('pathname: ', pathname === '/');
+    const [location,setLocation] = useState(history.location)
+    const { pathname } = location;
     const title = getPageTitle(pathname);
+    useEffect(() => {
+        history.listen(loca => {
+            setLocation(loca)
+        })
+    }, []);
     console.log('====================================');
     console.log('内容区域刷新了');
     return (
@@ -39,10 +44,10 @@ const LayoutContent = () => {
                                         timeout={500}
                                         classNames="fade"
                                         exit={false}
+                                        key={location.pathname}
                                     >
-                                        <Switch>
+                                        <Switch location={location}>
                                             <Route exact path="/" component={Welcome} />
-                                            {/* <Route exact path="/" render={() => <Redirect to="/welcome" />} /> */}
                                             {routeList.map((route: IRoute) => (
                                                 <Route exact key={config.BASENAME + route.path} path={route.path} component={route.component}></Route>
                                             ))}

@@ -20,7 +20,7 @@ function Breadcrumbs() {
     }
     useEffect(() => {
         setBreadcrumbs(getBreadcrumbs(filterArrayBreadcrums(history.location.pathname))); // 初次加载
-        history.listen((path: Path) => { // 监听路由辩护变化
+        history.listen((path: Path) => { // 监听路由变化
             setBreadcrumbs(getBreadcrumbs(filterArrayBreadcrums(history.location.pathname)));
         })
     }, []);
