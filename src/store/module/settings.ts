@@ -6,9 +6,10 @@ export interface Settings {
     collapsed: boolean; // 是否折叠
     defaultSelectedKeys: string;
     defaultOpenKeys: Array<string>;
+    loadingStatus: boolean
 }
 
-const SETTINGS_KEY = 'settings';
+export const SETTINGS_KEY = 'settings';
 
 const localSettings = LocalStore.getValue<Settings>(SETTINGS_KEY) || {};
 
@@ -16,6 +17,7 @@ const defaults: Settings = {
     collapsed: false,
     defaultSelectedKeys: '',
     defaultOpenKeys: [],
+    loadingStatus: false,
     ...localSettings,
 };
 
@@ -36,7 +38,8 @@ const settingsReducer: Reducer<Settings, Action<any>> = (
 
     switch (type) {
         case UPDATE_SETTINSG:
-            LocalStore.setValue(SETTINGS_KEY, payload as Settings);
+            let newData = Object.assign(LocalStore.getValue(SETTINGS_KEY),payload)
+            LocalStore.setValue(SETTINGS_KEY, newData as Settings);
             return {
                 ...payload,
             };

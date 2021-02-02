@@ -4,7 +4,9 @@ import BaseConfig from '../config';
 import { getToken } from '../utils/cookie';
 import store from '../store/index';
 import { logout } from '../store/module/user';
+import { updateSettings,SETTINGS_KEY,Settings } from '@/store/module/settings';
 // import { clearSideBarRoutes } from '../store/module/app';
+import LocalStore from '@/utils/store';
 
 interface ResponseData<T> {
   code: number;
@@ -21,6 +23,8 @@ axios.defaults.headers = {
 };
 
 // 指定请求地址
+const localStorage = LocalStore.getValue(SETTINGS_KEY) as Settings
+console.log('localStorage: ', localStorage);
 
 axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? BaseConfig.API_URL : '';
 
@@ -28,7 +32,8 @@ axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? BaseConfig.API_
 axios.interceptors.request.use(
   (config: AxiosRequestConfig) => {
     const token = getToken();
-
+    localStorage.loadingStatus = true
+    store.dispatch(updateSettings(localStorage));
     // 获取用户token，用于校验
     /* eslint-disable  no-param-reassign */
     if (token) {
@@ -45,6 +50,8 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   (res: AxiosResponse<ResponseData<any>>) => {
+    localStorage.loadingStatus = false
+    store.dispatch(updateSettings(localStorage));
     console.log('res: ', res);
     // 请求成功 此处进行数据的批量处理
     if (res.status === 200) {
@@ -54,6 +61,8 @@ axios.interceptors.response.use(
     }
   },
   (error: AxiosError) => {
+    localStorage.loadingStatus = false
+    store.dispatch(updateSettings(localStorage));
     console.log('error: ', error.response)
     // @ts-ignore
     const { status } = error.response;
