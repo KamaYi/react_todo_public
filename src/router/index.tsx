@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Layout from "@/views/layout";
 import Login from "@/views/login";
 import { StoreState } from '@/store/types';
-import watermark from '@/router/utils'
+import watermark from '@/utils'
 
 interface RouteProps {
     token: string
