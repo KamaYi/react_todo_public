@@ -1,4 +1,7 @@
 import routes, { IRoute } from './config';
+import LocalStore from '@/utils/store'
+let localRouteList: any[] = [] // 全局的路由数据
+
 /**
  *
  * 以递归的方式展平react router数组
@@ -33,12 +36,27 @@ const flattenRoutes = (routeArray: any) =>
 //   return [];
 // }
 
-function getRouteList(): IRoute[] { // 本地遍历后的路由一维数组暂不能进行浏览器storage缓存，暂不能进行处理，只能在路由刷新时实时的进行遍历----后期优化
+function getRouteList(): IRoute[] {
   if (routes.length > 0) {
-    return flattenRoutes(routes);
+    console.log(localRouteList);
+    if (localRouteList.length) {
+      return localRouteList
+    } else {
+      const flatten: Array<IRoute>  = flattenRoutes(routes)
+      console.log('flatten: ', flatten);
+      localRouteList = flatten
+      return flatten
+    }
   }
   return [];
 }
+
+// function getRouteList(): IRoute[] { // 本地遍历后的路由一维数组暂不能进行浏览器storage缓存，暂不能进行处理，只能在路由刷新时实时的进行遍历----后期优化
+//   if (routes.length > 0) {
+//     return flattenRoutes(routes);
+//   }
+//   return [];
+// }
 
 export const routeList = getRouteList()
 console.log('routeList: ', routeList);
