@@ -1,4 +1,4 @@
-import { request } from '@/interception';
+import { request,RequestConfig } from '@/interception';
 import { UserState } from '@/store/module/user';
 
 export interface UserLoginData {
@@ -17,7 +17,8 @@ export function apiUserLogin(data: UserLoginData) {
 export function apiNav() {
     return request({
         method: 'GET',
-        url: '/api/nav'
-    });
+        url: '/api/nav',
+        isLoading: false
+    } as RequestConfig);
 }
 

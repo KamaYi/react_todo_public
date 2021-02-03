@@ -28,11 +28,15 @@ console.log('localStorage: ', localStorage);
 
 axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? BaseConfig.API_URL : '';
 
+export interface  RequestConfig extends AxiosRequestConfig {
+  isLoading?: boolean // 接口是否进行全局加载
+}
 // 添加请求拦截器
 axios.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config: RequestConfig) => {
+    console.log('config: ', config);
     const token = getToken();
-    localStorage.loadingStatus = true
+    localStorage.loadingStatus = config.isLoading || true
     store.dispatch(updateSettings(localStorage));
     // 获取用户token，用于校验
     /* eslint-disable  no-param-reassign */
