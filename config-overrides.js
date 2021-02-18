@@ -62,7 +62,11 @@ module.exports = {
             test: /\.js(\?.*)?$/i,    //匹配参与压缩的文件
             parallel: true,    //使用多进程并发运行
             terserOptions: {    //Terser 压缩配置
-                output: { comments: false }
+                output: { comments: false },
+                compress: {
+                    drop_debugger: true,
+                    drop_console: true
+                }
             },
             extractComments: true,    //将注释剥离到单独的文件中
         }))

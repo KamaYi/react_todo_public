@@ -74,6 +74,6 @@
     "express": "^4.17.1",
     "mockjs": "^1.1.0",
     "react-app-rewired": "^2.1.8",
-    "terser-webpack-plugin": "^5.1.1"
+    "terser-webpack-plugin": "^4.2.3"
   }
 }
