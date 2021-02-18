@@ -39,13 +39,11 @@ function LayoutSider(props: LayoutSiderProps) {
     }, []);
 
     const clickMenu = (item: MenuList) => {
+        console.log('item: ', item);
 
         // 点击子集菜单记录id
-        let subscript: number = 0;
-        settings.defaultOpenKeys.find((ele, index) => {
-            if ((ele = item.id)) subscript = index;
-        }); // 存储展开menu
-        subscript ? settings.defaultOpenKeys.splice(subscript, 1) : settings.defaultOpenKeys.push(item.id);
+        settings.defaultOpenKeys = []
+        settings.defaultOpenKeys.push(item.id.substring(0,item.id.indexOf('-')),item.id.substring(0,item.id.lastIndexOf('-')),item.id)
         settings.defaultSelectedKeys = item.id;
         props.updateSettings(settings);
         routeKeysMap[item.id] ? history.push(routeKeysMap[item.id]) : history.replace('/error/404')
