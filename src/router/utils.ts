@@ -13,7 +13,8 @@ const flattenRoutes = (routeArray: any) =>
   routeArray.reduce((pre: any, cur: IRoute) => {
     pre.push({
       ...cur,
-      auth: typeof cur.auth !== 'undefined' ? cur.auth : true
+      auth: typeof cur.auth !== 'undefined' ? cur.auth : true,
+      isClick: typeof cur.isClick !== 'undefined' ? cur.isClick : true
     });
     return pre.concat(
       Array.isArray(cur.children) ? flattenRoutes(cur.children) : []

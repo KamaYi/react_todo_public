@@ -25,9 +25,11 @@ function Breadcrumbs() {
         })
     }, []);
     function toLink(link: IRoute) {
-        console.log('link: ', link);
         let findItem: any = routeList.find(item => item.path === link.path)
-        history.push(findItem.path)
+        console.log('findItem: ', findItem);
+        if (findItem.isClick) {
+            findItem.children && findItem.children.length > 1 ? history.push(findItem.children.find( (item: any) => history.location.pathname.includes(item.path.substring(item.path.lastIndexOf('/'),item.path.length))).path) : history.push(findItem.path)
+        }
     }
     return (
         <div className="breadcrumb-container">
@@ -38,8 +40,13 @@ function Breadcrumbs() {
                     //         route.children &&  <Link to={route.path}>{route.meta.title}</Link>
                     //     }
                     // </Breadcrumb.Item>
-                    <Breadcrumb.Item key={route.path}>{route.meta.title}
-                    </Breadcrumb.Item>
+                    route.isClick ? (
+                        <Breadcrumb.Item key={route.path}>
+                            <span className="link_name" onClick={() => toLink(route)}>{route.meta.title}</span>
+                        </Breadcrumb.Item>
+                    ) : (
+                        <Breadcrumb.Item key={route.path}><span>{route.meta.title}</span></Breadcrumb.Item>
+                    )
                 ))}
             </Breadcrumb>
         </div>

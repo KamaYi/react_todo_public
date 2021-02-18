@@ -23,13 +23,14 @@ const LayoutContent = (props: LayoutContentProps) => {
     console.log('props: ', props);
     const history = useHistory()
     const [location, setLocation] = useState(history.location)
+    console.log('location: ', location);
     const { pathname } = location;
     const title = getPageTitle(pathname);
     useEffect(() => {
         history.listen(loca => {
             setLocation(loca)
         })
-    }, []);
+    }, [history]);
     console.log('====================================');
     console.log('内容区域刷新了');
     return (
@@ -45,12 +46,11 @@ const LayoutContent = (props: LayoutContentProps) => {
                         <Spin spinning={props.loadingStatus} delay={200}>
                             <div className="scrollbar-content_container">
                             <Suspense fallback={<Spin className="layout__loading" />}>
-                                <TransitionGroup className="transitionGroup">
+                                <TransitionGroup className="transition Group">
                                     <CSSTransition
                                         timeout={500}
                                         classNames="fade"
                                         exit={false}
-                                        key={location.pathname}
                                     >
                                         <Switch location={location}>
                                             <Route exact path="/" component={Welcome} />

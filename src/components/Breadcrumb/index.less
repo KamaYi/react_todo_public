@@ -1,11 +1,12 @@
 .breadcrumb-container .ant-breadcrumb {
 	margin-bottom: @interval16;
-	span .ant-breadcrumb-link:hover {
+	.link_name:hover {
 		color: @primary;
 		cursor: pointer;
 	}
-	span:last-child .ant-breadcrumb-link {
+	span:last-child .ant-breadcrumb-link .link_name {
 		color: @black;
 		cursor: unset;
+		pointer-events: none;
 	}
 }

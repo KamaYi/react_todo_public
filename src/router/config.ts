@@ -11,6 +11,8 @@ export interface IRouteBase {
   meta: IRouteMeta;
   // 是否校验权限, false 为不校验, 不存在该属性或者为true 为校验, 子路由会继承父路由的 auth 属性
   auth?: boolean;
+  // 是否可以点击跳转----菜单--面包屑
+  isClick?: boolean
 }
 
 export interface IRouteMeta {
@@ -39,7 +41,7 @@ const routes: IRoute[] = [
     meta: {
       title: '欢迎页',
     }
-  },{
+  }, {
     path: '/error',
     meta: {
       title: '错误页面',
@@ -67,6 +69,7 @@ const routes: IRoute[] = [
     meta: {
       title: '嵌套路由',
     },
+    isClick: false,
     children: [
       {
         path: '/menu/menu1',
@@ -94,22 +97,22 @@ const routes: IRoute[] = [
               title: '菜单2_2',
             },
             children: [{
-                path: '/menu/menu2/menu2_2/men2_2_details',
-                component: React.lazy(() => import('@/views/menu/menu2/menu2_2/men2_2_details')),
-                meta: {
-                  title: '菜单2_2_详情',
-                },
-              }
+              path: '/menu/menu2/menu2_2/men2_2_details',
+              component: React.lazy(() => import('@/views/menu/menu2/menu2_2/men2_2_details')),
+              meta: {
+                title: '菜单2_2_详情',
+              },
+            }
             ]
           }
         ]
-      } ,{
+      }, {
         path: '/guide',
         component: React.lazy(() => import(/*webpackChunkName:'Guide'*/'@/views/guide')),
         meta: {
           title: '引导页',
         }
-      }, 
+      },
     ]
   }
 ];
