@@ -24,10 +24,6 @@ export interface IRoute extends IRouteBase {
   children?: IRoute[];
 }
 
-/**
- * routes 区分业务和系统模块。在此按照模块进行设计拆分，分别引入
- */
-
 const routes: IRoute[] = [
   {
     path: '/login',
