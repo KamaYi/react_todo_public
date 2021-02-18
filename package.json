@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/charts": "^1.0.17",
     "@craco/craco": "^6.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -72,6 +73,7 @@
     "customize-cra": "^1.0.0",
     "express": "^4.17.1",
     "mockjs": "^1.1.0",
-    "react-app-rewired": "^2.1.8"
+    "react-app-rewired": "^2.1.8",
+    "terser-webpack-plugin": "^5.1.1"
   }
 }

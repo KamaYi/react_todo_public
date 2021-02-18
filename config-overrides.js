@@ -1,26 +1,8 @@
 /* config-overrides.js */
-const { override, fixBabelImports, addLessLoader, addWebpackAlias, overrideDevServer } = require("customize-cra");
+const { override, fixBabelImports, addLessLoader, addWebpackAlias, overrideDevServer, addWebpackPlugin } = require("customize-cra");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const path = require("path");
-
-// 打包配置
-const addCustomize = () => config => {
-    if (process.env.NODE_ENV === 'production') {
-        // 关闭sourceMap
-        config.devtool = false;
-        // 配置打包后的文件位置
-        config.output.path = __dirname + '../dist/';
-        config.output.publicPath = './';
-        // 添加js打包gzip配置
-        config.plugins.push(
-            new CompressionWebpackPlugin({
-                test: /\.js$|\.css$/,
-                threshold: 1024,
-            }),
-        )
-    }
-    return config;
-}
 
 // 跨域配置
 const devServerConfig = () => config => {
@@ -74,7 +56,16 @@ module.exports = {
         addWebpackAlias({
             "@": path.resolve(__dirname, 'src')
         }),
-        // addCustomize(),
+        // 判断环境，只有在生产环境的时候才去使用这个插件
+        // 如果不想这样做的话可以只修改build的命令为"build": "react-app-rewired build"
+        process.env.NODE_ENV === 'production' && addWebpackPlugin(new TerserPlugin({
+            test: /\.js(\?.*)?$/i,    //匹配参与压缩的文件
+            parallel: true,    //使用多进程并发运行
+            terserOptions: {    //Terser 压缩配置
+                output: { comments: false }
+            },
+            extractComments: true,    //将注释剥离到单独的文件中
+        }))
     ),
     devServer: overrideDevServer(devServerConfig())
 };
